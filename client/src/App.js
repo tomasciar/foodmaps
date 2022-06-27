@@ -1,6 +1,10 @@
 import logo from "./images/logo.svg";
 import "./styles/App.css";
 
+fetch("http://localhost:2820/test").then(function (response) {
+  console.log(response.json());
+});
+
 function App() {
   return (
     <div className='App'>
