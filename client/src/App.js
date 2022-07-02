@@ -1,11 +1,12 @@
 import logo from "./images/logo.svg";
 import "./styles/App.css";
-
-fetch("http://localhost:2820/test").then(function (response) {
-  console.log(response.json());
-});
+import { getDomain } from "./utils/setup.js";
 
 function App() {
+  fetch(`${getDomain()}/test`).then(function (response) {
+    console.log(response.json());
+  });
+
   return (
     <div className='App'>
       <header className='App-header'>
