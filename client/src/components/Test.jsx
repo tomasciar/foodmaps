@@ -3,6 +3,8 @@ import { getDomain } from "../utils/setup.js";
 
 /**
  * Test component.
+ * @function Test
+ * @async
  * @returns {JSX.Element}
  */
 const Test = () => {
