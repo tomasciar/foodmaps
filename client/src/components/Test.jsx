@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { getDomain } from "../utils/setup.js";
+import { useState } from 'react';
+import { getDomain } from '../utils/setup.js';
 
 /**
  * Test component.
@@ -8,7 +8,7 @@ import { getDomain } from "../utils/setup.js";
  * @returns {JSX.Element}
  */
 const Test = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   fetch(`${getDomain()}/test`)
     .then(response => response.json())
