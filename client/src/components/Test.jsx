@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getDomain } from '../utils/setup.js';
+import { Button } from 'reactstrap';
 
 /**
  * Test component.
@@ -10,12 +11,18 @@ import { getDomain } from '../utils/setup.js';
 const Test = () => {
   const [message, setMessage] = useState('');
 
-  fetch(`${getDomain()}/test`)
-    .then(response => response.json())
-    .then(data => setMessage(data.message))
-    .catch(error => console.log(error));
+  const displayMessage = async () => {
+    const response = await fetch(`${getDomain()}/test`);
+    const data = await response.json();
+    setMessage(data.message);
+  };
 
-  return <span>{message}</span>;
+  return (
+    <div>
+      <Button onClick={displayMessage}>Click Me!</Button>
+      {message && <div>{message}</div>}
+    </div>
+  );
 };
 
 export default Test;
