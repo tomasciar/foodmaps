@@ -8,7 +8,7 @@ import { Button } from 'reactstrap';
  * @async
  * @returns {JSX.Element}
  */
-const Test = () => {
+export default function Test() {
   const [message, setMessage] = useState('');
 
   const displayMessage = async () => {
@@ -23,6 +23,4 @@ const Test = () => {
       {message && <div>{message}</div>}
     </div>
   );
-};
-
-export default Test;
+}
