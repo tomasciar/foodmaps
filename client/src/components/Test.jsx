@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getDomain } from '../utils/setup.js';
+import { getDomain, log } from '../utils/helpers.js';
 import { Button } from 'reactstrap';
 
 /**
