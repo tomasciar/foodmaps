@@ -3,7 +3,7 @@ import cors from 'cors';
 import env from 'dotenv';
 
 // Import routes
-import testRoute from './routes/test.route.js';
+import test from './routes/test.route.js';
 
 const app = express();
 
@@ -14,6 +14,6 @@ const port = process.env.PORT || 5000;
 app.use(cors({ origin: '*' }));
 
 // Use routes
-app.use('/test', testRoute);
+app.use('/test', test);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
