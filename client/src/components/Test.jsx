@@ -12,7 +12,7 @@ export default function Test() {
   const [message, setMessage] = useState('');
 
   const displayMessage = async () => {
-    const response = await fetch(`${getDomain()}/test`);
+    const response = await fetch(`${getDomain()}/test/testFunction`);
     const data = await response.json();
     setMessage(data.message);
   };

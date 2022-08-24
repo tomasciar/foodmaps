@@ -1,17 +1,19 @@
-const express = require('express');
-const app = express();
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
+import env from 'dotenv';
 
-require('dotenv').config();
+// Import routes
+import testRoute from './routes/test.route.js';
+
+const app = express();
+
+env.config();
 const port = process.env.PORT || 5000;
 
 // Bypass CORS policy
 app.use(cors({ origin: '*' }));
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+// Use routes
+app.use('/test', testRoute);
 
-app.get('/test', (req, res) => {
-  res.send({
-    message: 'Hello, World!'
-  });
-});
+app.listen(port, () => console.log(`Listening on port ${port}`));
