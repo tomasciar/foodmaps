@@ -19,7 +19,7 @@ export default function Test() {
 
   return (
     <div>
-      <Button onClick={displayMessage}>Click Me!</Button>
+      <Button onClick={displayMessage}>Test</Button>
       {message && <div>{message}</div>}
     </div>
   );

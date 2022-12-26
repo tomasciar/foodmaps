@@ -8,7 +8,7 @@ import test from './routes/test.route.js';
 const app = express();
 
 env.config();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 2820;
 
 // Bypass CORS policy
 app.use(cors({ origin: '*' }));
