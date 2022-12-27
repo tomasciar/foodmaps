@@ -3,7 +3,7 @@ import cors from 'cors';
 import env from 'dotenv';
 
 // Import routes
-import test from './routes/test.route.js';
+import test from './routes/test.route';
 
 const app = express();
 

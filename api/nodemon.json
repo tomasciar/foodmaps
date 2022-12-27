@@ -1,0 +1,5 @@
+{
+  "watch": ["controllers", "routes", "server.ts"],
+  "ext": ".ts,.json",
+  "exec": "npx ts-node ./server.ts"
+}
