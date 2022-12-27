@@ -8,7 +8,7 @@ import { Button } from 'reactstrap';
  * @async
  * @returns {JSX.Element}
  */
-export default function Test() {
+export default function Test(): JSX.Element {
   const [message, setMessage] = useState('');
 
   const displayMessage = async () => {

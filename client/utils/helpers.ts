@@ -1,9 +1,9 @@
 /**
  * Determines the domain of the current environment.
  * @function getDomain
- * @returns {string} The domain of the current environment
+ * @returns {string} the domain of the current environment
  */
-export const getDomain = () => {
+export const getDomain = (): string => {
   if (process.env.NODE_ENV === 'production') return 'https://foodmaps.com';
   return `http://localhost:2820`;
 };
@@ -12,9 +12,9 @@ export const getDomain = () => {
  * Logs the specified text with extra information.
  * @function log
  * @param  {...any} args
- * @returns {string} The information that will be outputted
+ * @returns {void} the information that will be outputted
  */
-export const log = (...args) => {
+export const log = (...args: any[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.log('Log');
     for (const arg of args) {
