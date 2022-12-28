@@ -6,6 +6,8 @@ import Price from '../helpers/classes/Price';
 export interface Restaurant {
   name: string;
   deliveryFee: Price;
+  hours: string;
+  rating: number;
   foodCategories: Array<string>;
   // Change location from string to Geolocation later
   location: string;
