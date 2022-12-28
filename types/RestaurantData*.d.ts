@@ -9,6 +9,7 @@ export interface Restaurant {
   hours: string;
   rating: number;
   foodCategories: Array<string>;
+  menuItems: Array<MenuItem>;
   // Change location from string to Geolocation later
   location: string;
   url: URL;
