@@ -1,20 +1,20 @@
-import Price from '../utils/Formatting';
+import Price from '../helpers/classes/Price';
 
 /**
- * @type Restaurant
+ * @interface Restaurant
  */
 export interface Restaurant {
   name: string;
-  deliveryFee?: Price;
+  deliveryFee: Price;
   foodCategories: Array<string>;
   // Change location from string to Geolocation later
   location: string;
   url: URL;
-  imagePath?: string;
+  imagePath: string;
 }
 
 /**
- * @type MenuItem
+ * @interface MenuItem
  */
 export interface MenuItem {
   from: Restaurant;
