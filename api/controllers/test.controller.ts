@@ -7,7 +7,7 @@ export default class Test {
   /**
    * @function testFunction
    * @async
-   * @returns Promise<object | void>
+   * @returns Promise<object>
    */
   static async testFunction(req: Request, res: Response): Promise<object> {
     try {
