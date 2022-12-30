@@ -35,10 +35,7 @@ export default class RestaurantData implements Required<Restaurant> {
    * @abstract
    * @returns void
    */
-  async getData(): Promise<any /* change this later */> {
-    const uri: string = process.env['MONGO_URI'];
-    const client: MongoClient = new MongoClient(uri);
-
+  async getData(client: MongoClient): Promise<any /* change this later */> {
     try {
       await client.connect();
     } catch (e: unknown) {
@@ -48,7 +45,3 @@ export default class RestaurantData implements Required<Restaurant> {
     }
   }
 }
-
-const test = new RestaurantData();
-
-test.getData().catch(console.error);
