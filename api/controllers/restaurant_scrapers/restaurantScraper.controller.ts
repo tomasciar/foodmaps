@@ -16,7 +16,7 @@ export default abstract class RestaurantScraper {
   urlSpecifier: string;
   imagePathSpecifier: string;
 
-  constructor() {
+  constructor(scrapingSource: string) {
     // fetch this data from a third party so that the entire applications does not
     // need to be recompiled if a company changes their specifier
     this.nameSpecifier = '';
@@ -31,10 +31,9 @@ export default abstract class RestaurantScraper {
   }
 
   /**
-   * @function scrape scrapes the specified service and stores the data in a database,
-   * then the data is fetched from the database and stored in the class fields
+   * @function scrape scrapes the specified service and stores the data in a database
    * @abstract
-   * @returns Promise<Array<Objects>>
+   * @returns Promise<Array<object>>
    */
   abstract scrape(): Promise<Array<object>>;
 }

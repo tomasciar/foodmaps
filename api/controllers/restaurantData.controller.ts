@@ -1,9 +1,9 @@
 import Price from '../../helpers/classes/Price';
 import { Restaurant, MenuItem } from '../../types/RestaurantData';
+import { MongoClient } from 'mongodb';
 
 /**
  * @class RestaurantData
- * @abstract
  */
 export default class RestaurantData implements Required<Restaurant> {
   name: string;
@@ -35,7 +35,20 @@ export default class RestaurantData implements Required<Restaurant> {
    * @abstract
    * @returns void
    */
-  getData(): void {
-    return;
+  async getData(): Promise<any /* change this later */> {
+    const uri: string = process.env['MONGO_URI'];
+    const client: MongoClient = new MongoClient(uri);
+
+    try {
+      await client.connect();
+    } catch (e: unknown) {
+      console.error(e);
+    } finally {
+      await client.close();
+    }
   }
 }
+
+const test = new RestaurantData();
+
+test.getData().catch(console.error);
