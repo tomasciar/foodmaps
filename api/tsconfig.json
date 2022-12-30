@@ -1,10 +1,13 @@
 {
   "ts-node": {
-    "require": ["tsconfig-paths/register"]
+    "require": ["tsconfig-paths/register"],
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   },
   "compileOnSave": true,
   "compilerOptions": {
-    "target": "es2019",
+    "target": "es6",
     "lib": [
       "es6",
       "DOM",
@@ -27,9 +30,10 @@
     "noImplicitAny": false,
     "strictNullChecks": false,
     "skipLibCheck": true,
-    "module": "es6",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "removeComments": true
+    "removeComments": true,
+    "resolveJsonModule": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../helpers/**/*.ts", "../types/**/*.ts"],
   "exclude": ["node_modules"]
