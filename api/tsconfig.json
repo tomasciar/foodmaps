@@ -1,4 +1,7 @@
 {
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
   "compileOnSave": true,
   "compilerOptions": {
     "target": "es2019",
@@ -14,10 +17,8 @@
       "ES2020.String",
       "ES2019.Array"
     ],
-    "module": "commonjs",
     "outDir": "build",
     "rootDirs": ["controllers", "routes", "server.ts"],
-    "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": true,
     "esModuleInterop": true,
@@ -25,8 +26,11 @@
     "strict": true,
     "noImplicitAny": false,
     "strictNullChecks": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "removeComments": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../helpers/**/*.ts", "../types/**/*.ts"],
   "exclude": ["node_modules"]
 }

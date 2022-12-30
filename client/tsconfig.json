@@ -1,5 +1,5 @@
 {
-  "compileOnSave": true,
+  "compileOnSave": true, // change this all to match backend later where it makes sense
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
