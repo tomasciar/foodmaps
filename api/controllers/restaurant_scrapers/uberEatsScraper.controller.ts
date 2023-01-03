@@ -5,6 +5,15 @@ import { MongoClient } from 'mongodb';
 import { Geolocation, Restaurant, MenuItem } from '../../../types/RestaurantData';
 
 /**
+ * @type UberDeal
+ */
+type UberDeal = `Buy 1 get 1 free` |
+                `Free item (spend \$${number | string})` |
+                `$0 Delivery Fee (spend \$${number | string})` |
+                `Spend \$${number | string}, save \$${number | string}` |
+                `Save on selected items`;
+
+/**
  * @class UberScraper
  */
 export default class UberEatsScraper extends RestaurantScraper {
@@ -66,6 +75,13 @@ export default class UberEatsScraper extends RestaurantScraper {
         if (request.userData.label === 'RESTAURANT') {
           const script = $('script[type="application/ld+json"]').first().html();
           const data = JSON.parse(script);
+          const 
+
+          const menuItems: Array<MenuItem> = 
+
+          output.push({
+            name: 
+          });
         }
       }
     });
