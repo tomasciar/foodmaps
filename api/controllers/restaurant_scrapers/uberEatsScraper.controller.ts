@@ -1,17 +1,19 @@
 import RestaurantScraper from './restaurantScraper.controller';
-import { Actor } from 'apify';
+import { RequestQueue } from 'apify';
 import { CheerioCrawler, log, LogLevel } from 'crawlee';
+import { MongoClient } from 'mongodb';
+import { Geolocation, Restaurant, MenuItem } from '../../../types/RestaurantData';
 
 /**
  * @class UberScraper
  */
 export default class UberEatsScraper extends RestaurantScraper {
   source: string = 'UberEats';
-  startUrl: URL;
+  startUrls: Array<string>;
 
-  constructor(startUrl: URL) {
-    super('UberEats');
-    this.startUrl = startUrl;
+  constructor(client: MongoClient, startUrls: Array<string>) {
+    super(client, 'UberEats');
+    this.startUrls = startUrls;
   }
 
   /**
@@ -19,16 +21,19 @@ export default class UberEatsScraper extends RestaurantScraper {
    * @returns Promise<Array<object>>
    * @docs https://sdk.apify.com/docs/examples/cheerio-crawler
    */
-  override async scrape(): Promise<Array<object>> {
-    log.setLevel(LogLevel.DEBUG);
+  override async scrape(): Promise<Array<Restaurant>> {
+    const output: Array<Restaurant> = [];
+    const scraped = new Set();
 
-    await Actor.init();
+    log.setLevel(LogLevel.DEBUG);
+    const requestQueue = await RequestQueue.open();
 
     const crawler = new CheerioCrawler({
       minConcurrency: 10,
       maxConcurrency: 50,
       maxRequestRetries: 1,
       requestHandlerTimeoutSecs: 30,
+      requestQueue,
 
       /**
        * @function requestHandler called for each URL to crawl
@@ -36,41 +41,36 @@ export default class UberEatsScraper extends RestaurantScraper {
        * - request: an instance of the Request class
        * - $: the cheerio object containing parsed HTML
        */
-      async requestHandler({ request, $ }) {
+      requestHandler: async ({ request, $ }) => {
         log.debug(`Processing ${request.url}...`);
 
-        if (request.userData.label === 'START') {
-          const containers = $('.h7.h8.h9').toArray();
+        if (request.userData.label === undefined) {
+          const script = $('script[type="application/ld+json"]').eq(1).html();
+          const data = JSON.parse(script);
+          console.log(data);
 
-          const urls = containers
-            .filter(container => {
-              return $(container).find('div.bx').length;
-            })
-            .map(container => {
-              return $(container).find('a').attr('href').toString();
-            });
+          for (const element of data.itemListElement) {
+            if (scraped.has(element.item.url)) continue;
+            else scraped.add(element.item.url);
 
-          for (const item of urls) {
-            const updatedURL = `https://ubereats.com${item}`;
-            await enqueueRequest({
-              url: updatedURL,
+            requestQueue.addRequest({
+              url: element.item.url,
               userData: {
-                label: 'DETAIL'
+                label: 'RESTAURANT',
+                restaurantData: element.item
               }
             });
           }
         }
 
-        if (request.userData.label === 'DETAIL') {
-          const { url } = request;
-          log.info(`Scraping ${url}`);
-          await skipLinks();
-
-          return { url, restaurantName: $('h1.co').text() };
+        if (request.userData.label === 'RESTAURANT') {
+          const script = $('script[type="application/ld+json"]').first().html();
+          const data = JSON.parse(script);
         }
       }
     });
 
-    return [];
+    await crawler.run(this.startUrls);
+    return output;
   }
 }
