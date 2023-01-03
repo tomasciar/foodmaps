@@ -17,13 +17,14 @@ export interface Restaurant {
   readonly deliveryFee: Price;
   readonly deliveryTime: string;
   readonly hours: Array<Date>;
-  readonly rating: number;
+  readonly averageRating: number;
+  readonly numberOfRatings: number;
   readonly foodCategories: Array<string>;
   readonly menuItems: Array<MenuItem>;
   readonly address: object;
   readonly geolocation: Geolocation;
   readonly url: URL;
-  readonly imagePath: URL;
+  readonly imageUrl: URL;
   readonly phoneNumber: PhoneNumber;
 }
 
@@ -36,5 +37,5 @@ export interface MenuItem {
   readonly deal: string;
   readonly savings: Price;
   readonly url: URL;
-  readonly imagePath: URL;
+  readonly imageUrl: URL;
 }
