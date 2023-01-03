@@ -21,15 +21,15 @@ export default class Price {
  * @param value: string | number
  * @returns number
  */
-const removeNonDigits = (value: string | number): number => {
+function removeNonDigits(value: string | number): number {
   return parseFloat(`${value}`.replace(/[^\d.]/g, ''));
-};
+}
 
 /**
  * @function removeNonDigits removes all characters except for digits
  * @param value: string | number
  * @returns number
  */
-const formatPrice = (value: string | number): string => {
+function formatPrice(value: string | number): string {
   return '$' + parseFloat(`${value}`.replace(/[^\d.]/g, '')).toFixed(2);
-};
+}
