@@ -30,6 +30,12 @@ const removeNonDigitsAndAddPrefix = (value: string | number, prefix: string | nu
   return parseFloat(alt);
 };
 
+/**
+ * @function formatPhoneNumber
+ * @param value: string | number
+ * @param prefix: string | number
+ * @returns string
+ */
 const formatPhoneNumber = (value: string | number, prefix: string | number): string => {
   let alt = `${value}`.replace(/\D/g, '');
   if (alt.length === 10) alt = prefix + alt;
