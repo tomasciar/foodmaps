@@ -11,7 +11,25 @@ export default class Price {
 
   constructor(value: string | number) {
     this.rawValue = value;
-    this.dollarValue = parseFloat(`${value}`.replace(/[^\d.]/g, ''));
-    this.formattedValue = '$' + parseFloat(`${value}`.replace(/[^\d.]/g, '')).toFixed(2);
+    this.dollarValue = removeNonDigits(value);
+    this.formattedValue = formatPrice(value);
   }
 }
+
+/**
+ * @function removeNonDigits removes all characters except for digits
+ * @param value: string | number
+ * @returns number
+ */
+const removeNonDigits = (value: string | number): number => {
+  return parseFloat(`${value}`.replace(/[^\d.]/g, ''));
+};
+
+/**
+ * @function removeNonDigits removes all characters except for digits
+ * @param value: string | number
+ * @returns number
+ */
+const formatPrice = (value: string | number): string => {
+  return '$' + parseFloat(`${value}`.replace(/[^\d.]/g, '')).toFixed(2);
+};
