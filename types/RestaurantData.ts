@@ -1,29 +1,40 @@
 import Price from '../helpers/classes/Price';
+import { PhoneNumber } from '../helpers/classes/PhoneNumber';
+
+/**
+ * @interface Geolocation
+ */
+export interface Geolocation {
+  readonly latitude: number;
+  readonly longitude: number;
+}
 
 /**
  * @interface Restaurant
  */
 export interface Restaurant {
-  name: string;
-  deliveryFee: Price;
-  hours: string;
-  rating: number;
-  foodCategories: Array<string>;
-  menuItems: Array<MenuItem>;
-  // Change location from string to Geolocation later
-  location: string;
-  url: URL;
-  imagePath: string;
+  readonly name: string;
+  readonly deliveryFee: Price;
+  readonly deliveryTime: string;
+  readonly hours: Array<Date>;
+  readonly rating: number;
+  readonly foodCategories: Array<string>;
+  readonly menuItems: Array<MenuItem>;
+  readonly address: object;
+  readonly geolocation: Geolocation;
+  readonly url: URL;
+  readonly imagePath: URL;
+  readonly phoneNumber: PhoneNumber;
 }
 
 /**
  * @interface MenuItem
  */
 export interface MenuItem {
-  from: Restaurant;
-  name: string;
-  price: Price;
-  savings: Price;
-  url: URL;
-  imagePath: string;
+  readonly name: string;
+  readonly price: Price;
+  readonly deal: string;
+  readonly savings: Price;
+  readonly url: URL;
+  readonly imagePath: URL;
 }
