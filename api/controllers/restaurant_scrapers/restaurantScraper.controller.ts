@@ -28,6 +28,6 @@ export default abstract class RestaurantScraper {
  * @param scrapingSource
  * @returns Promise<Object>
  */
-const getSpecifiers = async (client: MongoClient, scrapingSource: string): Promise<object> => {
+async function getSpecifiers(client: MongoClient, scrapingSource: string): Promise<object> {
   return await client.db('scrape').collection('specifiers').findOne({ source: scrapingSource });
-};
+}
