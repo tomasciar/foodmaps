@@ -46,7 +46,7 @@ export default class RestaurantData implements Required<Restaurant> {
    * @returns void
    */
   async getRestaurantData(client: MongoClient): Promise<RestaurantData> {
-    // use the url of the class to query the database
+    // use the url of the class to query the database and update fields
     return;
   }
 }
