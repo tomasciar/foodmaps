@@ -10,7 +10,7 @@ import UberEatsScraper from '../controllers/restaurant_scrapers/uberEatsScraper.
 // }
 
 // Import routes
-import test from '../routes/test.route';
+import test from './test.route';
 
 const app = express();
 
