@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { getDomain, log } from '../utils/helpers';
+import React from 'react';
+import { useState } from 'react';
+import { getDomain } from '../utils/helpers';
 import { Button } from 'reactstrap';
 
 /**
