@@ -8,17 +8,17 @@ import { Geolocation, Restaurant, MenuItem } from '../../../types/RestaurantData
  * @type UberDeal
  */
 type UberDeal =
-  | `Buy 1 get 1 free`
-  | `Free item (spend \$${number | string})`
-  | `$0 Delivery Fee (spend \$${number | string})`
-  | `Spend \$${number | string}, save \$${number | string}`
-  | `Save on selected items`;
+  | 'Buy 1 get 1 free'
+  | `Free item (spend $${number | string})`
+  | `$0 Delivery Fee (spend $${number | string})`
+  | `Spend $${number | string}, save $${number | string}`
+  | 'Save on selected items';
 
 /**
  * @class UberScraper
  */
 export default class UberEatsScraper extends RestaurantScraper {
-  source: string = 'UberEats';
+  source = 'UberEats';
   startUrls: Array<string>;
 
   constructor(client: MongoClient, startUrls: Array<string>) {
