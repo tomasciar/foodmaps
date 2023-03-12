@@ -36,7 +36,7 @@ const testMain = async () => {
 
     // Testing body
 
-    const ues = new UberEatsScraper(client, ['https://www.ubereats.com/ca/category/waterloo-on/breakfast-and-brunch']);
+    const ues = new UberEatsScraper(client);
     const data = await ues.scrape();
   } catch (e: unknown) {
     console.error(e);

@@ -23,13 +23,11 @@ type UberDeal =
  */
 export default class UberEatsScraper extends RestaurantScraper {
   readonly source: string;
-  readonly startUrls: Array<string>;
 
-  constructor(client: MongoClient, startUrls: Array<string>) {
+  constructor(client: MongoClient) {
     const source = 'UberEats';
     super(client, source);
     this.source = source;
-    this.startUrls = startUrls;
   }
 
   /**
@@ -46,8 +44,8 @@ export default class UberEatsScraper extends RestaurantScraper {
     const requestQueue = await RequestQueue.open();
 
     const crawler = new CheerioCrawler({
-      minConcurrency: 10,
-      maxConcurrency: 50,
+      minConcurrency: 1,
+      maxConcurrency: 1,
       maxRequestRetries: 1,
       requestHandlerTimeoutSecs: 30,
       requestQueue,
@@ -69,6 +67,10 @@ export default class UberEatsScraper extends RestaurantScraper {
             if (scraped.has(element.item.url)) continue;
             else scraped.add(element.item.url);
 
+            setTimeout(() => {
+              console.log(`Waiting for ${element.item.url}...`);
+            }, 300);
+
             requestQueue.addRequest({
               url: element.item.url,
               userData: {
@@ -83,6 +85,10 @@ export default class UberEatsScraper extends RestaurantScraper {
           const script = $('script[type="application/ld+json"]').first().html();
           const menuData = await JSON.parse(script);
           const restaurantData = request.userData.restaurantData;
+
+          setTimeout(() => {
+            console.log(`Waiting for ${restaurantData.name}'s data to populate...`);
+          }, 10);
 
           const restaurant: Restaurant = new RestaurantData({
             source: this.source,
@@ -122,11 +128,27 @@ export default class UberEatsScraper extends RestaurantScraper {
       }
     });
 
-    await crawler.run(this.startUrls);
+    const startUrls: Array<string> = await this.getStartUrls();
+    await crawler.run(startUrls);
 
-    await this.postRestaurants(restaurants);
-    await this.postMenuItems(menuItems);
+    if (restaurants.length > 0) await this.postRestaurants(restaurants);
+    if (menuItems.length > 0) await this.postMenuItems(menuItems);
 
     return { restaurants, menuItems };
+  }
+
+  /**
+   * @function getStartUrls gets the start URLs for Uber from the json file
+   * @returns {Array<string>}
+   */
+  override async getStartUrls(): Promise<Array<string>> {
+    const urls: any = [];
+
+    const module = await import('../../../data/json/uberStartUrls.json');
+    module.default.html.body.div.a.forEach(tag => {
+      urls.push(`https://www.ubereats.com${tag['@href']}`);
+    });
+
+    return urls;
   }
 }

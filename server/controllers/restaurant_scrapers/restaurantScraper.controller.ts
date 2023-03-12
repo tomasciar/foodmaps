@@ -17,9 +17,16 @@ export default abstract class RestaurantScraper {
   /**
    * @function scrape scrapes the specified service and stores the data in a database
    * @abstract
-   * @returns Promise<Array<object>>
+   * @returns {Promise<Array<object>>}
    */
   abstract scrape(): Promise<Object>;
+
+  /**
+   * @function getStartUrls gets the start URLs from the json file
+   * @abstract
+   * @returns {Promise<Array<string>>}
+   */
+  abstract getStartUrls(): Promise<Array<string>>;
 
   /**
    * @function postRestaurants posts the scraped Restaurants to the database
