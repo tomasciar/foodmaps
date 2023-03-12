@@ -1,0 +1,2366 @@
+{
+  "#comment": "",
+  "html": {
+    "body": {
+      "div": {
+        "@class": "hx k9 ka kb kc hp",
+        "a": [
+          {
+            "@data-test": "24 Hours Food",
+            "@href": "/ca/category/waterloo-on/24-hours",
+            "@class": "",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "24 Hours Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Acai",
+            "@href": "/ca/category/waterloo-on/acai",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Acai"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Afghan Food",
+            "@href": "/ca/category/waterloo-on/afghan",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Afghan Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "African Food",
+            "@href": "/ca/category/waterloo-on/african",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "African Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Alcohol",
+            "@href": "/ca/category/waterloo-on/alcohol",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Alcohol"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Allergy Friendly Food",
+            "@href": "/ca/category/waterloo-on/allergy-friendly",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Allergy Friendly Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "American Food",
+            "@href": "/ca/category/waterloo-on/american",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "American Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Appetisers",
+            "@href": "/ca/category/waterloo-on/appetizers",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Appetisers"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Arabian Food",
+            "@href": "/ca/category/waterloo-on/arabian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Arabian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Asian Food",
+            "@href": "/ca/category/waterloo-on/asian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Asian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Asian Fusion",
+            "@href": "/ca/category/waterloo-on/asian-fusion",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Asian Fusion"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Bacon",
+            "@href": "/ca/category/waterloo-on/bacon",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Bacon"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Bakery",
+            "@href": "/ca/category/waterloo-on/bakery",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Bakery"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Bangladeshi Food",
+            "@href": "/ca/category/waterloo-on/bangladeshi",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Bangladeshi Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Bar Food",
+            "@href": "/ca/category/waterloo-on/bar-food",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Bar Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "BBQ",
+            "@href": "/ca/category/waterloo-on/bbq",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "BBQ"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Beef dishes",
+            "@href": "/ca/category/waterloo-on/beef",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Beef dishes"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Belgian Food",
+            "@href": "/ca/category/waterloo-on/belgian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Belgian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Bento",
+            "@href": "/ca/category/waterloo-on/bento",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Bento"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Biryani",
+            "@href": "/ca/category/waterloo-on/biryani",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Biryani"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Bistro",
+            "@href": "/ca/category/waterloo-on/bistro",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Bistro"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Brazilian Food",
+            "@href": "/ca/category/waterloo-on/brazilian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Brazilian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Bread dishes",
+            "@href": "/ca/category/waterloo-on/bread",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Bread dishes"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Breakfast &amp; brunch",
+            "@href": "/ca/category/waterloo-on/breakfast-and-brunch",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Breakfast & brunch"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "British Food",
+            "@href": "/ca/category/waterloo-on/british",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "British Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Bubble tea",
+            "@href": "/ca/category/waterloo-on/bubble-tea",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Bubble tea"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Burgers",
+            "@href": "/ca/category/waterloo-on/burger",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Burgers"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Cafe",
+            "@href": "/ca/category/waterloo-on/cafe",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Cafe"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Cajun Food",
+            "@href": "/ca/category/waterloo-on/cajun",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Cajun Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Cakes",
+            "@href": "/ca/category/waterloo-on/cake",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Cakes"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Canadian Food",
+            "@href": "/ca/category/waterloo-on/canadian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Canadian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Sweets",
+            "@href": "/ca/category/waterloo-on/candy",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Sweets"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Cantonese Food",
+            "@href": "/ca/category/waterloo-on/cantonese",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Cantonese Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Caribbean Food",
+            "@href": "/ca/category/waterloo-on/caribbean",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Caribbean Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Charcuterie",
+            "@href": "/ca/category/waterloo-on/charcuterie",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Charcuterie"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Chili",
+            "@href": "/ca/category/waterloo-on/chili",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Chili"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Chinese Food",
+            "@href": "/ca/category/waterloo-on/chinese",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Chinese Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Coffee &amp; tea",
+            "@href": "/ca/category/waterloo-on/coffee-and-tea",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Coffee & tea"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Colombian Food",
+            "@href": "/ca/category/waterloo-on/colombian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Colombian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Comfort Food",
+            "@href": "/ca/category/waterloo-on/comfort-food",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Comfort Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Congee",
+            "@href": "/ca/category/waterloo-on/congee",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Congee"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Couscous",
+            "@href": "/ca/category/waterloo-on/couscous",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Couscous"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Cupcakes",
+            "@href": "/ca/category/waterloo-on/cupcake",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Cupcakes"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Cured meat",
+            "@href": "/ca/category/waterloo-on/cured-meat",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Cured meat"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Curry",
+            "@href": "/ca/category/waterloo-on/curry",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Curry"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Custard",
+            "@href": "/ca/category/waterloo-on/custard",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Custard"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Deli",
+            "@href": "/ca/category/waterloo-on/deli",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Deli"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Desserts",
+            "@href": "/ca/category/waterloo-on/dessert",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Desserts"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Dim sum",
+            "@href": "/ca/category/waterloo-on/dim-sum",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Dim sum"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Diner",
+            "@href": "/ca/category/waterloo-on/diner",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Diner"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Dinner",
+            "@href": "/ca/category/waterloo-on/dinner",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Dinner"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Doughnuts",
+            "@href": "/ca/category/waterloo-on/donut",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Doughnuts"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Dosa",
+            "@href": "/ca/category/waterloo-on/dosa",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Dosa"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Drink",
+            "@href": "/ca/category/waterloo-on/drink",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Drink"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Dutch Food",
+            "@href": "/ca/category/waterloo-on/dutch",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Dutch Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Eastern European Food",
+            "@href": "/ca/category/waterloo-on/eastern-european",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Eastern European Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Eggs",
+            "@href": "/ca/category/waterloo-on/eggs",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Eggs"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "English Food",
+            "@href": "/ca/category/waterloo-on/english",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "English Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Ethiopian Food",
+            "@href": "/ca/category/waterloo-on/ethiopian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Ethiopian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "European Food",
+            "@href": "/ca/category/waterloo-on/european",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "European Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Family meals",
+            "@href": "/ca/category/waterloo-on/family-meals",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Family meals"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Fast Food",
+            "@href": "/ca/category/waterloo-on/fast-food",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Fast Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Filipino Food",
+            "@href": "/ca/category/waterloo-on/filipino",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Filipino Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Fish &amp; chips",
+            "@href": "/ca/category/waterloo-on/fish-and-chips",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Fish & chips"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "French Food",
+            "@href": "/ca/category/waterloo-on/french",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "French Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Frozen Food",
+            "@href": "/ca/category/waterloo-on/frozen-food",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Frozen Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "German Food",
+            "@href": "/ca/category/waterloo-on/german",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "German Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Gluten Free ",
+            "@href": "/ca/category/waterloo-on/gluten-free",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Gluten Free"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Gourmet",
+            "@href": "/ca/category/waterloo-on/gourmet",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Gourmet"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Greek Food",
+            "@href": "/ca/category/waterloo-on/greek",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Greek Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Grill",
+            "@href": "/ca/category/waterloo-on/grill",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Grill"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Grocery",
+            "@href": "/ca/category/waterloo-on/grocery",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Grocery"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Halal",
+            "@href": "/ca/category/waterloo-on/halal",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Halal"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Hawaiian Food",
+            "@href": "/ca/category/waterloo-on/hawaiian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Hawaiian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Healthy Food",
+            "@href": "/ca/category/waterloo-on/healthy",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Healthy Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Home &amp; personal care",
+            "@href": "/ca/category/waterloo-on/home-and-personal-care",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Home & personal care"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Hot pot",
+            "@href": "/ca/category/waterloo-on/hotpot",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Hot pot"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Ice cream &amp; frozen yogurt",
+            "@href": "/ca/category/waterloo-on/ice-cream-and-frozen-yogurt",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Ice cream & frozen yogurt"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Indian Food",
+            "@href": "/ca/category/waterloo-on/indian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Indian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Indian curry",
+            "@href": "/ca/category/waterloo-on/indian-curry",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Indian curry"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Irish Food",
+            "@href": "/ca/category/waterloo-on/irish",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Irish Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Italian Food",
+            "@href": "/ca/category/waterloo-on/italian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Italian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Jamaican Food",
+            "@href": "/ca/category/waterloo-on/jamaican",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Jamaican Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Japanese Food",
+            "@href": "/ca/category/waterloo-on/japanese",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Japanese Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Japanese-style curry",
+            "@href": "/ca/category/waterloo-on/japanese-curry",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Japanese-style curry"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Juice &amp; Smoothies",
+            "@href": "/ca/category/waterloo-on/juice-and-smoothies",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Juice & Smoothies"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Kebabs",
+            "@href": "/ca/category/waterloo-on/kebabs",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Kebabs"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Kids Friendly Food",
+            "@href": "/ca/category/waterloo-on/kids-friendly",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Kids Friendly Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Korean Food",
+            "@href": "/ca/category/waterloo-on/korean",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Korean Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Korean BBQ",
+            "@href": "/ca/category/waterloo-on/korean-bbq",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Korean BBQ"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Kosher Food",
+            "@href": "/ca/category/waterloo-on/kosher",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Kosher Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Lasagne",
+            "@href": "/ca/category/waterloo-on/lasagne",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Lasagne"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Late Night Food",
+            "@href": "/ca/category/waterloo-on/late-night",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Late Night Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Latin American Food",
+            "@href": "/ca/category/waterloo-on/latin-american",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Latin American Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Latin Fusion",
+            "@href": "/ca/category/waterloo-on/latin-fusion",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Latin Fusion"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Lebanese Food",
+            "@href": "/ca/category/waterloo-on/lebanese",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Lebanese Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Spirits",
+            "@href": "/ca/category/waterloo-on/liquor",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Spirits"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Lobster",
+            "@href": "/ca/category/waterloo-on/lobster",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Lobster"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Low calorie",
+            "@href": "/ca/category/waterloo-on/low-calorie",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Low calorie"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Low carb",
+            "@href": "/ca/category/waterloo-on/low-carb",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Low carb"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Macaroni cheese",
+            "@href": "/ca/category/waterloo-on/mac-and-cheese",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Macaroni cheese"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Malaysian Food",
+            "@href": "/ca/category/waterloo-on/malaysian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Malaysian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Matcha",
+            "@href": "/ca/category/waterloo-on/matcha",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Matcha"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Mediterranean Food",
+            "@href": "/ca/category/waterloo-on/mediterranean",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Mediterranean Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Mexican Food",
+            "@href": "/ca/category/waterloo-on/mexican",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Mexican Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Middle Eastern Food",
+            "@href": "/ca/category/waterloo-on/middle-eastern",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Middle Eastern Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Milkshake",
+            "@href": "/ca/category/waterloo-on/milkshake",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Milkshake"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Modern Asian Food",
+            "@href": "/ca/category/waterloo-on/modern-asian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Modern Asian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Modern European Food",
+            "@href": "/ca/category/waterloo-on/modern-european",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Modern European Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "New American Food",
+            "@href": "/ca/category/waterloo-on/new-american",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "New American Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "New Canadian Food",
+            "@href": "/ca/category/waterloo-on/new-canadian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "New Canadian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "New Mexican Food",
+            "@href": "/ca/category/waterloo-on/new-mexican",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "New Mexican Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Nigerian Food",
+            "@href": "/ca/category/waterloo-on/nigerian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Nigerian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Noodles",
+            "@href": "/ca/category/waterloo-on/noodles",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Noodles"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "North Indian Food",
+            "@href": "/ca/category/waterloo-on/north-indian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "North Indian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Northern Thai Food",
+            "@href": "/ca/category/waterloo-on/northern-thai",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Northern Thai Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Organic Food",
+            "@href": "/ca/category/waterloo-on/organic",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Organic Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Oysters",
+            "@href": "/ca/category/waterloo-on/oysters",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Oysters"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Paella",
+            "@href": "/ca/category/waterloo-on/paella",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Paella"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pakistani Food",
+            "@href": "/ca/category/waterloo-on/pakistani",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pakistani Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pasta",
+            "@href": "/ca/category/waterloo-on/pasta",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pasta"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pastry",
+            "@href": "/ca/category/waterloo-on/pastry",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pastry"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Persian Food",
+            "@href": "/ca/category/waterloo-on/persian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Persian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pharmacy",
+            "@href": "/ca/category/waterloo-on/pharmacy",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pharmacy"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pho",
+            "@href": "/ca/category/waterloo-on/pho",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pho"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pie",
+            "@href": "/ca/category/waterloo-on/pie",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pie"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pizza",
+            "@href": "/ca/category/waterloo-on/pizza",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pizza"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Poke",
+            "@href": "/ca/category/waterloo-on/poke",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Poke"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Polish Food",
+            "@href": "/ca/category/waterloo-on/polish",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Polish Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Chicken",
+            "@href": "/ca/category/waterloo-on/pollo",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Chicken"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Portuguese Food",
+            "@href": "/ca/category/waterloo-on/portuguese",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Portuguese Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Poutine",
+            "@href": "/ca/category/waterloo-on/poutine",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Poutine"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pretzel",
+            "@href": "/ca/category/waterloo-on/pretzel",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pretzel"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Pub",
+            "@href": "/ca/category/waterloo-on/pub",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Pub"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Ramen",
+            "@href": "/ca/category/waterloo-on/ramen",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Ramen"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Raw Food",
+            "@href": "/ca/category/waterloo-on/raw",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Raw Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Ribs",
+            "@href": "/ca/category/waterloo-on/ribs",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Ribs"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Rolls",
+            "@href": "/ca/category/waterloo-on/rolls",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Rolls"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Rum",
+            "@href": "/ca/category/waterloo-on/rum",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Rum"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Salads",
+            "@href": "/ca/category/waterloo-on/salad",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Salads"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Salmon",
+            "@href": "/ca/category/waterloo-on/salmon",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Salmon"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Sandwiches",
+            "@href": "/ca/category/waterloo-on/sandwich",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Sandwiches"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Sashimi",
+            "@href": "/ca/category/waterloo-on/sashimi",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Sashimi"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Seafood",
+            "@href": "/ca/category/waterloo-on/seafood",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Seafood"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Shanghai Food",
+            "@href": "/ca/category/waterloo-on/shanghai",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Shanghai Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Shawarma",
+            "@href": "/ca/category/waterloo-on/shawarma",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Shawarma"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Singaporean Food",
+            "@href": "/ca/category/waterloo-on/singaporean",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Singaporean Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Snacks",
+            "@href": "/ca/category/waterloo-on/snacks",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Snacks"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Soul Food",
+            "@href": "/ca/category/waterloo-on/soul-food",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Soul Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Soup",
+            "@href": "/ca/category/waterloo-on/soup",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Soup"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "South African Food",
+            "@href": "/ca/category/waterloo-on/south-african",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "South African Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "South American Food",
+            "@href": "/ca/category/waterloo-on/south-american",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "South American Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "South Asian Food",
+            "@href": "/ca/category/waterloo-on/south-asian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "South Asian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "South East Asian Food",
+            "@href": "/ca/category/waterloo-on/south-east-asian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "South East Asian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "South Indian Food",
+            "@href": "/ca/category/waterloo-on/south-indian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "South Indian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Southern Food",
+            "@href": "/ca/category/waterloo-on/southern",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Southern Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Southern Thai Food",
+            "@href": "/ca/category/waterloo-on/southern-thai",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Southern Thai Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Spanish Food",
+            "@href": "/ca/category/waterloo-on/spanish",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Spanish Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Spirits",
+            "@href": "/ca/category/waterloo-on/spirits",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Spirits"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Street Food",
+            "@href": "/ca/category/waterloo-on/street-food",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Street Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Sushi",
+            "@href": "/ca/category/waterloo-on/sushi",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Sushi"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Sweets",
+            "@href": "/ca/category/waterloo-on/sweets",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Sweets"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Taiwanese Food",
+            "@href": "/ca/category/waterloo-on/taiwanese",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Taiwanese Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Tapas",
+            "@href": "/ca/category/waterloo-on/tapas",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Tapas"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Tex Mex",
+            "@href": "/ca/category/waterloo-on/tex-mex",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Tex Mex"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Thai Food",
+            "@href": "/ca/category/waterloo-on/thai",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Thai Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Turkish Food",
+            "@href": "/ca/category/waterloo-on/turkish",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Turkish Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Udon",
+            "@href": "/ca/category/waterloo-on/udon",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Udon"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Vegan Food",
+            "@href": "/ca/category/waterloo-on/vegan",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Vegan Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Vegan Friendly Food",
+            "@href": "/ca/category/waterloo-on/vegan-friendly",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Vegan Friendly Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Vegetarian Food",
+            "@href": "/ca/category/waterloo-on/vegetarian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Vegetarian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Vegetarian friendly",
+            "@href": "/ca/category/waterloo-on/vegetarian-friendly",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Vegetarian friendly"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Vietnamese Food",
+            "@href": "/ca/category/waterloo-on/vietnamese",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Vietnamese Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "West African Food",
+            "@href": "/ca/category/waterloo-on/west-african",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "West African Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "West Indian Food",
+            "@href": "/ca/category/waterloo-on/west-indian",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "West Indian Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Western Food",
+            "@href": "/ca/category/waterloo-on/western",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Western Food"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Wine",
+            "@href": "/ca/category/waterloo-on/wine",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Wine"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Wings",
+            "@href": "/ca/category/waterloo-on/wings",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Wings"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Wraps",
+            "@href": "/ca/category/waterloo-on/wrap",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Wraps"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Japanese BBQ",
+            "@href": "/ca/category/waterloo-on/yakiniku",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Japanese BBQ"
+                }
+              }
+            }
+          },
+          {
+            "@data-test": "Yakitori",
+            "@href": "/ca/category/waterloo-on/yakitori",
+            "div": {
+              "@class": "bi al",
+              "div": {
+                "div": {
+                  "@class": "bd c7 cu bc",
+                  "#text": "Yakitori"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
