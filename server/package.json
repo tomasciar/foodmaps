@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "start": "nodemon ./server.ts",
     "sandbox": "nodemon ./tests/sandbox.ts",
@@ -13,24 +13,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apify": "^3.1.1",
-    "cheerio": "^1.0.0-rc.12",
-    "cors": "^2.8.5",
-    "crawlee": "^3.1.4",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongodb": "^4.13.0",
-    "typescript": "^4.9.4"
+    "@types/mongodb": "4.0.7",
+    "apify": "3.1.1",
+    "cheerio": "1.0.0-rc.12",
+    "cors": "2.8.5",
+    "crawlee": "3.1.4",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "mongodb": "4.13.0",
+    "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.15",
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
-    "eslint": "^8.35.0",
-    "nodemon": "^2.0.21",
-    "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.1.1"
+    "@types/cors": "2.8.13",
+    "@types/express": "4.17.15",
+    "@types/node": "18.11.18",
+    "@typescript-eslint/eslint-plugin": "5.54.1",
+    "@typescript-eslint/parser": "5.54.1",
+    "eslint": "8.35.0",
+    "nodemon": "2.0.21",
+    "ts-node": "10.9.1",
+    "tsconfig-paths": "4.1.1"
   }
 }
