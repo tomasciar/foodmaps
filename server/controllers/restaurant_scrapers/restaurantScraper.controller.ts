@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb';
-import { MenuItem, Restaurant } from '../../../types/RestaurantData';
+import { MenuItem, Restaurant, ScrapedData } from '../../../types/RestaurantData';
 
 /**
  * @class RestaurantScraper
@@ -17,9 +17,9 @@ export default abstract class RestaurantScraper {
   /**
    * @function scrape scrapes the specified service and stores the data in a database
    * @abstract
-   * @returns {Promise<Array<object>>}
+   * @returns {Promise<Array<ScrapedData>>}
    */
-  abstract scrape(): Promise<Object>;
+  abstract scrape(): Promise<ScrapedData>;
 
   /**
    * @function getStartUrls gets the start URLs from the json file

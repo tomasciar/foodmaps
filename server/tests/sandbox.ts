@@ -28,7 +28,7 @@ const uri: string = process.env.MONGO_URI;
 const client: MongoClient = new MongoClient(uri);
 
 // For testing {
-process.env.POST_TO_DB = 'TRUE';
+process.env.POST_TO_DB = 'FALSE';
 
 const testMain = async () => {
   try {
