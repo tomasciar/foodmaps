@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import env from 'dotenv';
 import { MongoClient } from 'mongodb';
+import { Restaurant } from '../../types/RestaurantData';
 
 // For testing {
 import RestaurantData from '../controllers/restaurantData.controller';
@@ -27,17 +28,19 @@ const uri: string = process.env.MONGO_URI;
 const client: MongoClient = new MongoClient(uri);
 
 // For testing {
+process.env.POST_TO_DB = 'TRUE';
+
 const testMain = async () => {
   try {
     await client.connect();
 
     // Testing body
-    const rd = new RestaurantData();
-    await rd.getRestaurantData(client);
 
     const ues = new UberEatsScraper(client, ['https://www.ubereats.com/ca/category/waterloo-on/breakfast-and-brunch']);
-    const result = await ues.scrape();
-    console.log(result);
+    const data = await ues.scrape();
+
+    const restaurant: Restaurant = new RestaurantData(data.restaurants[0]);
+    console.log(restaurant);
   } catch (e: unknown) {
     console.error(e);
   } finally {
