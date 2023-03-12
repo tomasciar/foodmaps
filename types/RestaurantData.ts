@@ -13,14 +13,12 @@ export interface Geolocation {
  * @interface Restaurant
  */
 export interface Restaurant {
+  readonly source: string;
   readonly name: string;
-  readonly deliveryFee: Price;
-  readonly deliveryTime: string;
-  readonly hours: Array<Date>;
+  readonly hours: Array<Object>;
   readonly averageRating: number;
   readonly numberOfRatings: number;
   readonly foodCategories: Array<string>;
-  readonly menuItems: Array<MenuItem>;
   readonly address: object;
   readonly geolocation: Geolocation;
   readonly url: URL;
@@ -32,11 +30,20 @@ export interface Restaurant {
  * @interface MenuItem
  */
 export interface MenuItem {
+  readonly source: string;
+  readonly date: Date;
+  readonly fromRestaurant: URL;
   readonly name: string;
   readonly description: string;
   readonly price: Price;
   readonly deal: string;
-  readonly savings: Price;
   readonly url: URL;
-  readonly imageUrl: URL;
+}
+
+/**
+ * @interface ScrapedData
+ */
+export interface ScrapedData {
+  readonly restaurants: Array<Restaurant>;
+  readonly menuItems: Array<MenuItem>;
 }

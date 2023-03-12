@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb';
-import { Restaurant } from '../../../types/RestaurantData';
+import { MenuItem, Restaurant } from '../../../types/RestaurantData';
 
 /**
  * @class RestaurantScraper
@@ -19,15 +19,25 @@ export default abstract class RestaurantScraper {
    * @abstract
    * @returns Promise<Array<object>>
    */
-  abstract scrape(): Promise<Array<Restaurant>>;
-}
+  abstract scrape(): Promise<Object>;
 
-/**
- * @function getSpecifiers gets the scraping specifiers from the database (client)
- * @param client
- * @param scrapingSource
- * @returns Promise<Object>
- */
-async function getSpecifiers(client: MongoClient, scrapingSource: string): Promise<object> {
-  return await client.db('scrape').collection('specifiers').findOne({ source: scrapingSource });
+  /**
+   * @function postRestaurants posts the scraped Restaurants to the database
+   * @returns {0 | 1} 1 if error, 0 otherwise
+   */
+  async postRestaurants(items: Array<Restaurant>): Promise<0 | 1> {
+    if (process.env.POST_TO_DB === 'FALSE') return 1;
+    await this.client.db('scrape').collection('restaurants').insertMany(items);
+    return 0;
+  }
+
+  /**
+   * @function postMenuItems posts the scraped MenuItems to the database
+   * @returns {0 | 1} 1 if error, 0 otherwise
+   */
+  async postMenuItems(items: Array<MenuItem>): Promise<0 | 1> {
+    if (process.env.POST_TO_DB === 'FALSE') return 1;
+    await this.client.db('scrape').collection('menu_items').insertMany(items);
+    return 0;
+  }
 }
