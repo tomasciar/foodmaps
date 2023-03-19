@@ -14,7 +14,7 @@ export default class Test {
       return res.send({ message: 'Hello, World!' });
     } catch (error) {
       console.log(error);
-      return res.send({ message: 'Foodmaps' });
+      return res.send({ message: 'Error' });
     }
   }
 }

@@ -4,6 +4,7 @@ import env from 'dotenv';
 import { MongoClient } from 'mongodb';
 
 // Import routes
+import test from './tests/test.route';
 
 const app = express();
 
@@ -14,6 +15,7 @@ const port = process.env.PORT || 2820;
 app.use(cors({ origin: '*' }));
 
 // Use routes
+app.use('/test', test);
 
 const uri: string = process.env.MONGO_URI;
 const client: MongoClient = new MongoClient(uri);
