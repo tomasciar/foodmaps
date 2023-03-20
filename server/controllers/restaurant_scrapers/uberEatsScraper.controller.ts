@@ -69,7 +69,7 @@ export default class UberEatsScraper extends RestaurantScraper {
 
             setTimeout(() => {
               console.log(`Waiting for ${element.item.url}...`);
-            }, 300);
+            }, 200);
 
             requestQueue.addRequest({
               url: element.item.url,
@@ -107,7 +107,7 @@ export default class UberEatsScraper extends RestaurantScraper {
           restaurants.push(restaurant);
 
           menuData?.hasMenu?.hasMenuSection.forEach((section: any) => {
-            const deal: UberDeal | string = section.name;
+            const category: UberDeal | string = section.name;
 
             section.hasMenuItem.forEach((item: any) => {
               const menuItem: MenuItem = new MenuItemData({
@@ -117,7 +117,7 @@ export default class UberEatsScraper extends RestaurantScraper {
                 name: item.name,
                 description: item.description,
                 price: new Price(item.offers.price),
-                deal: deal,
+                category: category,
                 url: new URL(request.url)
               });
 

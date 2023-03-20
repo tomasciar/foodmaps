@@ -36,7 +36,7 @@ export interface MenuItem {
   readonly name: string;
   readonly description: string;
   readonly price: Price;
-  readonly deal: string;
+  readonly category: string;
   readonly url: URL;
 }
 

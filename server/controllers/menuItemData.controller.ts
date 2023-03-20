@@ -12,7 +12,7 @@ export default class MenuItemData implements Required<MenuItem> {
   name: string;
   description: string;
   price: Price;
-  deal: string;
+  category: string;
   url: URL;
 
   constructor(props: MenuItem) {
