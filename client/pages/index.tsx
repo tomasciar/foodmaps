@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Test from '../tests/Test';
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 export default function Home() {
   return (
@@ -15,7 +16,10 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <Test />
+        <h1 style={{ color: 'grey' }}>Enter an address:</h1>
+        <div style={{ width: '500px' }}>
+          <GooglePlacesAutocomplete apiKey='AIzaSyBu_Gfu-PgU-rRJ7hYP2-0K9Vb3qxqGt0s' />
+        </div>
       </main>
     </>
   );
