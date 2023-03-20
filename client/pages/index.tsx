@@ -1,7 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Test from '../tests/Test';
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
+/**
+ * Landing page
+ * @notes https://tintef.github.io/react-google-places-autocomplete/docs/v2-to-v3/
+ * @returns {JSX.Element}
+ */
 export default function Home() {
   return (
     <>
@@ -15,7 +21,13 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <Test />
+        <h1 style={{ color: 'grey' }}>Enter an address:</h1>
+        <GooglePlacesAutocomplete
+          selectProps={{
+            placeholder: 'Placeholder'
+          }}
+          apiKey='AIzaSyBu_Gfu-PgU-rRJ7hYP2-0K9Vb3qxqGt0s'
+        />
       </main>
     </>
   );
