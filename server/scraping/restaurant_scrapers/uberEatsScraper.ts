@@ -1,12 +1,12 @@
-import RestaurantScraper from './restaurantScraper.controller';
+import RestaurantScraper from './restaurantScraper';
 import { RequestQueue } from 'apify';
 import { CheerioCrawler, log, LogLevel } from 'crawlee';
 import { MongoClient } from 'mongodb';
 import { Restaurant, MenuItem, ScrapedData } from '../../../types/RestaurantData';
 import Price from '../../../helpers/classes/Price';
 import { NaPhoneNumber } from '../../../helpers/classes/PhoneNumber';
-import RestaurantData from '../restaurantData.controller';
-import MenuItemData from '../menuItemData.controller';
+import RestaurantData from '../restaurantData';
+import MenuItemData from '../menuItemData';
 
 /**
  * @type UberDeal
@@ -69,7 +69,7 @@ export default class UberEatsScraper extends RestaurantScraper {
 
             setTimeout(() => {
               console.log(`Waiting for ${element.item.url}...`);
-            }, 200);
+            }, 100);
 
             requestQueue.addRequest({
               url: element.item.url,

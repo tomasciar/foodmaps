@@ -1,5 +1,8 @@
-import { MongoClient } from 'mongodb';
+import { FindCursor, MongoClient, Sort, WithId } from 'mongodb';
 import { MenuItem, Restaurant, ScrapedData } from '../../../types/RestaurantData';
+import MenuItemData from '../menuItemData';
+import RestaurantData from '../restaurantData';
+import { Request, Response } from 'express';
 
 /**
  * @class RestaurantScraper
@@ -30,21 +33,17 @@ export default abstract class RestaurantScraper {
 
   /**
    * @function postRestaurants posts the scraped Restaurants to the database
-   * @returns {0 | 1} 1 if error, 0 otherwise
+   * @returns {void}
    */
-  async postRestaurants(items: Array<Restaurant>): Promise<0 | 1> {
-    if (process.env.POST_TO_DB === 'FALSE') return 1;
+  async postRestaurants(items: Array<Restaurant>): Promise<void> {
     await this.client.db('scrape').collection('restaurants').insertMany(items);
-    return 0;
   }
 
   /**
    * @function postMenuItems posts the scraped MenuItems to the database
-   * @returns {0 | 1} 1 if error, 0 otherwise
+   * @returns {void}
    */
-  async postMenuItems(items: Array<MenuItem>): Promise<0 | 1> {
-    if (process.env.POST_TO_DB === 'FALSE') return 1;
+  async postMenuItems(items: Array<MenuItem>): Promise<void> {
     await this.client.db('scrape').collection('menu_items').insertMany(items);
-    return 0;
   }
 }

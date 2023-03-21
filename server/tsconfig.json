@@ -7,7 +7,7 @@
   },
   "compileOnSave": true,
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2022",
     "lib": [
       "es6",
       "DOM",
@@ -18,7 +18,8 @@
       "ES2019.Object",
       "ES2018.AsyncIterable",
       "ES2020.String",
-      "ES2019.Array"
+      "ES2019.Array",
+      "es2020"
     ],
     "outDir": "build",
     "rootDirs": ["controllers", "routes", "server.ts"],
@@ -30,7 +31,7 @@
     "noImplicitAny": true,
     "strictNullChecks": false,
     "skipLibCheck": true,
-    "module": "commonjs",
+    "module": "es2022",
     "moduleResolution": "node",
     "removeComments": true,
     "resolveJsonModule": true

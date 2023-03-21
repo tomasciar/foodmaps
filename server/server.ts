@@ -5,6 +5,8 @@ import { MongoClient } from 'mongodb';
 
 // Import routes
 import test from './tests/test.route';
+import menu from './routes/menuItem.route';
+import restaurant from './routes/restaurant.route';
 
 const app = express();
 
@@ -16,8 +18,7 @@ app.use(cors({ origin: '*' }));
 
 // Use routes
 app.use('/test', test);
-
-const uri: string = process.env.MONGO_URI;
-const client: MongoClient = new MongoClient(uri);
+app.use('/menu', menu);
+app.use('/restaurant', restaurant);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
