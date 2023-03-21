@@ -3,6 +3,6 @@ import MenuItemController from '../controllers/menuItem.controller';
 
 const router = express.Router();
 
-router.route('/getMenuItems/:startingAtIndex/:numberOfItems/').get(MenuItemController.getMenuItems);
+router.route('/getMenuItems').get(MenuItemController.getMenuItems);
 
 export default router;

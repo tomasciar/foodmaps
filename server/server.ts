@@ -21,7 +21,4 @@ app.use('/test', test);
 app.use('/menu', menu);
 app.use('/restaurant', restaurant);
 
-const uri: string = process.env.MONGO_URI;
-const client: MongoClient = new MongoClient(uri);
-
 app.listen(port, () => console.log(`Listening on port ${port}`));
