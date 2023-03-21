@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import { MongoClient, Sort } from 'mongodb';
 import { Restaurant } from '../../types/RestaurantData';
 import RestaurantData from '../scraping/restaurantData';
 import Client from '../mongo/Client';
@@ -13,18 +12,25 @@ export default class RestaurantController {
    * @returns {Promise<Response<any, Record<string, any>>>}
    */
   static async getRestaurants(req: Request, res: Response): Promise<Response<any, Record<string, any>>> {
-    return res.send({ messsage: 'Something' });
+    const mongoClient = new Client();
+    const connection = await mongoClient.connect();
 
-    // const mongoClient = new Client();
-    // const items: any = Client.connect().db('scrape').collection('restaurants').find();
-    // .skip(parseInt(req.params.startingAtIndex))
-    // .limit(parseInt(req.params.numberOfRestaurants));
+    const startingAtIndex = parseInt(req.query.startingAtIndex as string);
+    const numberOfItems = parseInt(req.query.numberOfItems as string);
 
-    // const restaurants: Response<any, Record<string, any>> = items.map((item: any) => {
-    //   const restaurant: Restaurant = new RestaurantData(item);
-    //   return restaurant;
-    // });
+    const items: any = await connection
+      .db('scrape')
+      .collection('restaurants')
+      .find({ _id: { $exists: true } })
+      .skip(startingAtIndex)
+      .limit(numberOfItems)
+      .toArray();
 
-    // return res.send(restaurants);
+    const restaurants: Response<any, Record<string, any>> = items.map((item: any) => {
+      const restaurant: Restaurant = new RestaurantData(item);
+      return restaurant;
+    });
+
+    return res.send(restaurants);
   }
 }

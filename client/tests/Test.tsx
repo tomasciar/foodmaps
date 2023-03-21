@@ -13,10 +13,10 @@ export default function Test(): JSX.Element {
   const [message, setMessage] = useState('');
 
   const displayMessage = async () => {
-    //const response = await fetch(`${getDomain()}/test/testFunction`);
-    const response = await fetch(`${getDomain()}/menu/getMenuItems`);
+    const response = await fetch(`${getDomain()}/test/testFunction`);
+    // const response = await fetch(`${getDomain()}/menu/getMenuItems?startingAtIndex=50&numberOfItems=100`);
+    // const response = await fetch(`${getDomain()}/restaurant/getRestaurants?startingAtIndex=50&numberOfItems=100`);
     const data = await response.json();
-    console.log(data);
   };
 
   return (

@@ -1,12 +1,10 @@
 import { Request, Response } from 'express';
-import { MongoClient, Sort } from 'mongodb';
 import { MenuItem } from '../../types/RestaurantData';
 import MenuItemData from '../scraping/menuItemData';
-import env from 'dotenv';
 import Client from '../mongo/Client';
 
 /**
- * @class MenuItemController
+ * @controller MenuItemController
  */
 export default class MenuItemController {
   /**
@@ -17,12 +15,15 @@ export default class MenuItemController {
     const mongoClient = new Client();
     const connection = await mongoClient.connect();
 
+    const startingAtIndex = parseInt(req.query.startingAtIndex as string);
+    const numberOfItems = parseInt(req.query.numberOfItems as string);
+
     const items: any = await connection
       .db('scrape')
       .collection('menu_items')
       .find({ _id: { $exists: true } })
-      .skip(parseInt(req.params.startingAtIndex))
-      .limit(parseInt(req.params.numberOfItems))
+      .skip(startingAtIndex)
+      .limit(numberOfItems)
       .toArray();
 
     const menuItems: Response<any, Record<string, any>> = items.map((item: any) => {
