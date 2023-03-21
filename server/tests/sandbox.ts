@@ -5,8 +5,8 @@ import { MongoClient } from 'mongodb';
 import { Restaurant } from '../../types/RestaurantData';
 
 // For testing {
-import RestaurantData from '../controllers/restaurantData.controller';
-import UberEatsScraper from '../controllers/restaurant_scrapers/uberEatsScraper.controller';
+import RestaurantData from '../scraping/restaurantData';
+import UberEatsScraper from '../scraping/restaurant_scrapers/uberEatsScraper';
 
 // }
 
@@ -26,9 +26,6 @@ app.use('/test', test);
 
 const uri: string = process.env.MONGO_URI;
 const client: MongoClient = new MongoClient(uri);
-
-// For testing {
-process.env.POST_TO_DB = 'FALSE';
 
 const testMain = async () => {
   try {
