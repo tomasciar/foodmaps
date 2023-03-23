@@ -16,7 +16,7 @@
   "dependencies": {
     "@types/bson": "^4.2.0",
     "@types/mongodb": "4.0.7",
-    "apify": "3.1.2",
+    "apify": "3.1.4",
     "cheerio": "1.0.0-rc.12",
     "cors": "2.8.5",
     "crawlee": "3.3.0",
@@ -28,11 +28,11 @@
   "devDependencies": {
     "@types/cors": "2.8.13",
     "@types/express": "4.17.17",
-    "@types/node": "18.15.3",
+    "@types/node": "18.15.5",
     "@typescript-eslint/eslint-plugin": "5.56.0",
     "@typescript-eslint/parser": "5.56.0",
     "eslint": "8.36.0",
-    "nodemon": "2.0.21",
+    "nodemon": "2.0.22",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.1.2"
   }
