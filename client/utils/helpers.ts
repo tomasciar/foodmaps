@@ -5,7 +5,7 @@
  */
 export const getDomain = (): string => {
   if (process.env.NODE_ENV === 'production') return 'https://foodmaps.com';
-  return `http://localhost:3836`;
+  return `http://localhost:5000`;
 };
 
 /**
