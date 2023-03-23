@@ -37,7 +37,8 @@ export interface MenuItem {
   readonly description: string;
   readonly price: Price;
   readonly category: string;
-  readonly url: URL;
+  readonly geolocation: Geolocation;
+  readonly url: string;
 }
 
 /**
