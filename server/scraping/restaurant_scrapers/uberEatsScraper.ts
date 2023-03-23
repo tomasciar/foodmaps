@@ -88,7 +88,13 @@ export default class UberEatsScraper extends RestaurantScraper {
 
           setTimeout(() => {
             console.log(`Waiting for ${restaurantData.name}'s data to populate...`);
-          }, 10);
+          }, 100);
+
+          // Fix to make Mongo storage work
+          if (!menuData?.geo.latitude || !menuData?.geo.longitude) {
+            menuData.geo.latitude = 0;
+            menuData.geo.longitude = 0;
+          }
 
           const restaurant: Restaurant = new RestaurantData({
             source: this.source,
@@ -98,9 +104,12 @@ export default class UberEatsScraper extends RestaurantScraper {
             numberOfRatings: menuData?.aggregateRating.reviewCount,
             foodCategories: restaurantData.servesCuisine,
             address: restaurantData.address,
-            geolocation: menuData?.geo,
-            url: new URL(restaurantData.url),
-            imageUrl: new URL(restaurantData.image),
+            geolocation: {
+              latitude: menuData?.geo.latitude,
+              longitude: menuData?.geo.longitude
+            },
+            url: restaurantData.url,
+            imageUrl: restaurantData.image,
             phoneNumber: new NaPhoneNumber(restaurantData.telephone)
           });
 
@@ -113,12 +122,16 @@ export default class UberEatsScraper extends RestaurantScraper {
               const menuItem: MenuItem = new MenuItemData({
                 source: this.source,
                 date: new Date(),
-                fromRestaurant: new URL(restaurantData.url),
+                fromRestaurant: restaurantData.url,
                 name: item.name,
                 description: item.description,
                 price: new Price(item.offers.price),
                 category: category,
-                url: new URL(request.url)
+                geolocation: {
+                  latitude: menuData?.geo.latitude,
+                  longitude: menuData?.geo.longitude
+                },
+                url: request.url
               });
 
               menuItems.push(menuItem);
