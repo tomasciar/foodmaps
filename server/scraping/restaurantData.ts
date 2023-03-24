@@ -8,6 +8,7 @@ import { PhoneNumber, NaPhoneNumber } from '../../helpers/classes/PhoneNumber';
  */
 export default class RestaurantData implements Required<Restaurant> {
   source: string;
+  date: Date;
   name: string;
   hours: Array<Date>;
   averageRating: number;
@@ -25,12 +26,10 @@ export default class RestaurantData implements Required<Restaurant> {
 
   /**
    * @function getRestaurantData fetches the field data from the database
-   * @returns {Promise<0 | 1>} 1 if failure, 0 otherwise
+   * @returns {Promise<void>}
    */
-  async getRestaurantData(client: MongoClient): Promise<0 | 1> {
+  async getRestaurantData(client: MongoClient): Promise<void> {
     const data = await client.db('scrape').collection('restaurants').findOne({ url: this.url });
-    if (!data) return 1;
     Object.assign(this, data);
-    return 0;
   }
 }
