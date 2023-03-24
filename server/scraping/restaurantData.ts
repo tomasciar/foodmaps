@@ -8,6 +8,7 @@ import { PhoneNumber, NaPhoneNumber } from '../../helpers/classes/PhoneNumber';
  */
 export default class RestaurantData implements Required<Restaurant> {
   source: string;
+  date: Date;
   name: string;
   hours: Array<Date>;
   averageRating: number;

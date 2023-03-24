@@ -98,6 +98,7 @@ export default class UberEatsScraper extends RestaurantScraper {
 
           const restaurant: Restaurant = new RestaurantData({
             source: this.source,
+            date: new Date(),
             name: restaurantData.name,
             hours: menuData?.openingHoursSpecification,
             averageRating: menuData?.aggregateRating.ratingValue,

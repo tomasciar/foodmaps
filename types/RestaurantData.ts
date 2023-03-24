@@ -14,6 +14,7 @@ export interface Geolocation {
  */
 export interface Restaurant {
   readonly source: string;
+  readonly date: Date;
   readonly name: string;
   readonly hours: Array<Object>;
   readonly averageRating: number;
