@@ -1,8 +1,7 @@
-import { FindCursor, MongoClient, Sort, WithId } from 'mongodb';
-import { MenuItem, Restaurant, ScrapedData } from '../../../types/RestaurantData';
-import MenuItemData from '../menuItemData';
-import RestaurantData from '../restaurantData';
-import { Request, Response } from 'express';
+import { MongoClient } from 'mongodb';
+import MenuItem from '../../../types/interfaces/MenuItem';
+import Restaurant from '../../../types/interfaces/Restaurant';
+import ScrapedData from '../../../types/interfaces/ScrapedData';
 
 /**
  * @class RestaurantScraper

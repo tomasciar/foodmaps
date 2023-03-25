@@ -5,8 +5,8 @@ import { MongoClient } from 'mongodb';
 import { Restaurant } from '../../types/RestaurantData';
 
 // For testing {
-import RestaurantData from '../scraping/restaurantData';
-import UberEatsScraper from '../scraping/restaurant_scrapers/uberEatsScraper';
+import RestaurantData from '../service/restaurantData';
+import UberEatsScraper from '../service/restaurant_scrapers/uberEatsScraper';
 
 // }
 

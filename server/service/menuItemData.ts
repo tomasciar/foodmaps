@@ -1,7 +1,7 @@
-import Price from '../../helpers/classes/Price';
-import { MenuItem } from '../../types/RestaurantData';
+import Price from '../../types/classes/Price';
+import MenuItem from '../../types/interfaces/MenuItem';
+import Geolocation from '../../types/interfaces/Geolocation';
 import { MongoClient } from 'mongodb';
-import { Geolocation } from '../../types/RestaurantData';
 
 /**
  * @class MenuItemData

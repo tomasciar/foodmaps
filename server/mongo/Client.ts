@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 import env from 'dotenv';
 
-export class Client {
+export default class Client {
   public client: MongoClient;
 
   constructor() {
@@ -20,5 +20,3 @@ export class Client {
     return this.client;
   }
 }
-
-export default Client;
