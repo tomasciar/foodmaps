@@ -158,7 +158,7 @@ export default class UberEatsScraper extends RestaurantScraper {
   override async getStartUrls(): Promise<Array<string>> {
     const urls: any = [];
 
-    const module = await import('../../../data/json/uberStartUrls.json');
+    const module = await import('../../../data/json/waterlooUberStartUrls.json');
     module.default.html.body.div.a.forEach(tag => {
       urls.push(`https://www.ubereats.com${tag['@href']}`);
     });
