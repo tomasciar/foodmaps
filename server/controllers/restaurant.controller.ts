@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { Restaurant } from '../../types/RestaurantData';
-import RestaurantData from '../scraping/restaurantData';
+import Restaurant from '../../types/interfaces/Restaurant';
+import RestaurantData from '../service/restaurantData';
 import Client from '../mongo/Client';
 
 /**

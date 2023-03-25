@@ -1,7 +1,7 @@
-import Price from '../../helpers/classes/Price';
-import { Restaurant, Geolocation } from '../../types/RestaurantData';
-import { MongoClient, WithId } from 'mongodb';
-import { PhoneNumber, NaPhoneNumber } from '../../helpers/classes/PhoneNumber';
+import Restaurant from '../../types/interfaces/Restaurant';
+import Geolocation from '../../types/interfaces/Geolocation';
+import { MongoClient } from 'mongodb';
+import { PhoneNumber } from '../../types/classes/PhoneNumber';
 
 /**
  * @class RestaurantData

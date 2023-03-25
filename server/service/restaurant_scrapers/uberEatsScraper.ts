@@ -2,9 +2,11 @@ import RestaurantScraper from './restaurantScraper';
 import { RequestQueue } from 'apify';
 import { CheerioCrawler, log, LogLevel } from 'crawlee';
 import { MongoClient } from 'mongodb';
-import { Restaurant, MenuItem, ScrapedData } from '../../../types/RestaurantData';
-import Price from '../../../helpers/classes/Price';
-import { NaPhoneNumber } from '../../../helpers/classes/PhoneNumber';
+import MenuItem from '../../../types/interfaces/MenuItem';
+import Restaurant from '../../../types/interfaces/Restaurant';
+import ScrapedData from '../../../types/interfaces/ScrapedData';
+import Price from '../../../types/classes/Price';
+import { NaPhoneNumber } from '../../../types/classes/PhoneNumber';
 import RestaurantData from '../restaurantData';
 import MenuItemData from '../menuItemData';
 
