@@ -73,4 +73,19 @@ export default class MenuItemController {
 
     return res.send(menuItems);
   }
+
+  /**
+   * @function getMenuItemByUrl
+   * @returns {Promise<MenuItem>}
+   */
+  static async getMenuItemByUrl(req: Request, res: Response): Promise<Response<any, Record<string, any>>> {
+    const mongoClient = new Client();
+    const connection = await mongoClient.connect();
+
+    const url = req.query.url as string;
+    const item: any = await connection.db('scrape').collection('menu_items').findOne({ url: url });
+    const menuItem: MenuItem = new MenuItemData(item);
+
+    return res.send(menuItem);
+  }
 }
