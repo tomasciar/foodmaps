@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import env from 'dotenv';
 import { MongoClient } from 'mongodb';
-import { Restaurant } from '../../types/RestaurantData';
+import Restaurant from '../../types/interfaces/Restaurant';
 
 // For testing {
 import RestaurantData from '../service/restaurantData';

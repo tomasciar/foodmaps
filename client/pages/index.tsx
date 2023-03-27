@@ -1,11 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Test from '../tests/Test';
-import AddressInput from '../components/AddressInput';
 
 /**
  * @component Landing page
- * @notes https://tintef.github.io/react-google-places-autocomplete/docs/v2-to-v3/
  * @returns {JSX.Element}
  */
 export default function Home(): JSX.Element {
@@ -21,8 +18,7 @@ export default function Home(): JSX.Element {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <h1>Enter an address</h1>
-        <AddressInput />
+        <h1>Hello, World!</h1>
       </main>
     </>
   );

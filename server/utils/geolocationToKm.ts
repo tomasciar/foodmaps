@@ -1,9 +1,5 @@
 /**
  * @function distanceInKmBetweenEarthCoordinates
- * @param lat1
- * @param lon1
- * @param lat2
- * @param lon2
  * @returns {number}
  */
 export default function distanceInKmBetweenEarthCoordinates(
