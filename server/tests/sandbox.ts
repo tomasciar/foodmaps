@@ -7,6 +7,7 @@ import Restaurant from '../../types/interfaces/Restaurant';
 // For testing {
 import RestaurantData from '../service/restaurantData';
 import UberEatsScraper from '../service/restaurant_scrapers/uberEatsScraper';
+import SkipTheDishesScraper from '../service/restaurant_scrapers/skipTheDishesScraper';
 
 // }
 
@@ -33,8 +34,9 @@ const testMain = async () => {
 
     // Testing body
 
-    const ues = new UberEatsScraper(client);
-    const data = await ues.scrape();
+    // const ues = new UberEatsScraper(client);
+    const skip = new SkipTheDishesScraper(client);
+    skip.scrape();
   } catch (e: unknown) {
     console.error(e);
   } finally {
