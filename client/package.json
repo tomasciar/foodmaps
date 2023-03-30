@@ -22,7 +22,7 @@
     "react-dom": "18.2.0",
     "react-google-places-autocomplete": "^3.4.0",
     "reactstrap": "9.1.8",
-    "typescript": "5.0.2"
+    "typescript": "5.0.3"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
