@@ -45,4 +45,14 @@ export default abstract class RestaurantScraper {
   async postMenuItems(items: Array<MenuItem>): Promise<void> {
     await this.client.db('scrape').collection('menu_items').insertMany(items);
   }
+
+  /**
+   * @function delay
+   * @param time (in milliseconds)
+   */
+  async delay(time: number) {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, time);
+    });
+  }
 }

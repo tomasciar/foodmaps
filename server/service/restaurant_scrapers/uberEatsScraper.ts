@@ -69,9 +69,7 @@ export default class UberEatsScraper extends RestaurantScraper {
             if (scraped.has(element.item.url)) continue;
             else scraped.add(element.item.url);
 
-            setTimeout(() => {
-              console.log(`Waiting for ${element.item.url}...`);
-            }, 100);
+            await this.delay(100);
 
             requestQueue.addRequest({
               url: element.item.url,
@@ -88,11 +86,8 @@ export default class UberEatsScraper extends RestaurantScraper {
           const menuData = await JSON.parse(script);
           const restaurantData = request.userData.restaurantData;
 
-          setTimeout(() => {
-            console.log(`Waiting for ${restaurantData.name}'s data to populate...`);
-          }, 100);
+          await this.delay(100);
 
-          // Fix to make Mongo storage work
           if (!menuData?.geo.latitude || !menuData?.geo.longitude) {
             menuData.geo.latitude = 0;
             menuData.geo.longitude = 0;
@@ -158,7 +153,7 @@ export default class UberEatsScraper extends RestaurantScraper {
    * @returns {Array<string>}
    */
   override async getStartUrls(): Promise<Array<string>> {
-    const urls: any = [];
+    const urls: Array<string> = [];
 
     const module = await import('../../../public/json/waterlooUberStartUrls.json');
     module.default.html.body.div.a.forEach(tag => {
