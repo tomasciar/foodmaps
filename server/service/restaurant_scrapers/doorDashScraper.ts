@@ -143,7 +143,7 @@ export default class DoorDashScraper extends RestaurantScraper {
   override async getStartUrls(): Promise<Array<string>> {
     const urls: Array<string> = [];
 
-    for (let i: number = 1; i <= 10; i++) {
+    for (let i: number = 1; i <= 15; i++) {
       urls.push(`https://www.doordash.com/en-CA/food-delivery/waterloo-on-restaurants/${i}`);
     }
 
