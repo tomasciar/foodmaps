@@ -1,39 +1,29 @@
 import RestaurantScraper from './restaurantScraper';
 import { RequestQueue } from 'apify';
 import { CheerioCrawler, log, LogLevel } from 'crawlee';
+import { Element } from 'cheerio';
 import { MongoClient } from 'mongodb';
 import MenuItem from '../../../types/interfaces/MenuItem';
 import Restaurant from '../../../types/interfaces/Restaurant';
 import ScrapedData from '../../../types/interfaces/ScrapedData';
 import Price from '../../../types/classes/Price';
-import { NaPhoneNumber } from '../../../types/classes/PhoneNumber';
 import RestaurantData from '../restaurantData';
 import MenuItemData from '../menuItemData';
 
 /**
- * @type UberDeal
+ * @class DoorDashScraper
  */
-type UberDeal =
-  | 'Buy 1 get 1 free'
-  | `Free item (spend $${number | string})`
-  | `$0 Delivery Fee (spend $${number | string})`
-  | `Spend $${number | string}, save $${number | string}`
-  | 'Save on selected items';
-
-/**
- * @class UberScraper
- */
-export default class UberEatsScraper extends RestaurantScraper {
+export default class DoorDashScraper extends RestaurantScraper {
   readonly source: string;
 
   constructor(client: MongoClient) {
-    const source = 'UberEats';
+    const source = 'DoorDash';
     super(client, source);
     this.source = source;
   }
 
   /**
-   * @function scrape scrapes UberEats and stores the data in a database
+   * @function scrape scrapes DoorDash and stores the data in a database
    * @returns {Promise<ScrapedData>}
    * @docs https://sdk.apify.com/docs/examples/cheerio-crawler
    */
@@ -62,7 +52,7 @@ export default class UberEatsScraper extends RestaurantScraper {
         log.debug(`Processing ${request.url}...`);
 
         if (request.userData.label === undefined) {
-          const script = $('script[type="application/ld+json"]').eq(1).html();
+          const script = $('script[type="application/ld+json"]').first().html();
           const data = JSON.parse(script);
 
           for (const element of data.itemListElement) {
@@ -97,43 +87,41 @@ export default class UberEatsScraper extends RestaurantScraper {
             source: this.source,
             date: new Date(),
             name: restaurantData.name,
-            hours: menuData?.openingHoursSpecification,
-            averageRating: menuData?.aggregateRating.ratingValue,
-            numberOfRatings: menuData?.aggregateRating.reviewCount,
+            hours: ['No time data available'],
+            averageRating: menuData?.aggregateRating?.ratingValue,
+            numberOfRatings: menuData?.aggregateRating?.reviewCount,
             foodCategories: restaurantData.servesCuisine,
             address: restaurantData.address,
             geolocation: {
-              latitude: menuData?.geo.latitude,
-              longitude: menuData?.geo.longitude
+              latitude: +`${menuData?.geo.latitude}`,
+              longitude: +`${menuData?.geo.longitude}`
             },
             url: restaurantData.url,
             imageUrl: restaurantData.image,
-            phoneNumber: new NaPhoneNumber(restaurantData.telephone)
+            phoneNumber: Object.create(null)
           });
 
           restaurants.push(restaurant);
 
-          menuData?.hasMenu?.hasMenuSection.forEach((section: any) => {
-            const category: UberDeal | string = section.name;
+          const menuItemData = $('div[data-anchor-id="MenuItem"]').toArray();
 
-            section.hasMenuItem.forEach((item: any) => {
-              const menuItem: MenuItem = new MenuItemData({
-                source: this.source,
-                date: new Date(),
-                fromRestaurant: restaurantData.url,
-                name: item.name,
-                description: item.description,
-                price: new Price(item.offers.price),
-                category: category,
-                geolocation: {
-                  latitude: menuData?.geo.latitude,
-                  longitude: menuData?.geo.longitude
-                },
-                url: request.url
-              });
-
-              menuItems.push(menuItem);
+          menuItemData.forEach((item: Element) => {
+            const menuItem: MenuItem = new MenuItemData({
+              source: this.source,
+              date: new Date(),
+              fromRestaurant: restaurantData.url,
+              name: $(item).find('h3').text(),
+              description: $(item).find('span[data-telemetry-id="storeMenuItem.subtitle"]').text(),
+              price: new Price($(item).find('span[data-anchor-id="StoreMenuItemPrice"]').text()),
+              category: restaurantData.servesCuisine.join(' '),
+              geolocation: {
+                latitude: +`${menuData?.geo.latitude}`,
+                longitude: +`${menuData?.geo.longitude}`
+              },
+              url: request.url
             });
+
+            menuItems.push(menuItem);
           });
         }
       }
@@ -155,10 +143,9 @@ export default class UberEatsScraper extends RestaurantScraper {
   override async getStartUrls(): Promise<Array<string>> {
     const urls: Array<string> = [];
 
-    const module = await import('../../../public/json/waterlooUberStartUrls.json');
-    module.default.html.body.div.a.forEach(tag => {
-      urls.push(`https://www.ubereats.com${tag['@href']}`);
-    });
+    for (let i: number = 1; i <= 15; i++) {
+      urls.push(`https://www.doordash.com/en-CA/food-delivery/waterloo-on-restaurants/${i}`);
+    }
 
     return urls;
   }
