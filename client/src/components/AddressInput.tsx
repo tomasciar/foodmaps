@@ -1,8 +1,8 @@
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import { getDomain } from '../utils/helpers';
-import Restaurant from '../../types/interfaces/Restaurant';
-import MenuItem from '../../types/interfaces/MenuItem';
-import AddressInputProps from '../../types/interfaces/AddressInput';
+import Restaurant from '../../../types/interfaces/Restaurant';
+import MenuItem from '../../../types/interfaces/MenuItem';
+import AddressInputProps from '../../../types/interfaces/AddressInput';
 
 /**
  * @component AddressInput

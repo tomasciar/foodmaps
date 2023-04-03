@@ -1,4 +1,4 @@
-import MenuItem from '../../types/interfaces/MenuItem';
+import MenuItem from '../../../types/interfaces/MenuItem';
 import { Card } from 'antd';
 
 /**
