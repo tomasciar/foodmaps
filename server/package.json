@@ -1,13 +1,13 @@
 {
   "name": "server",
-  "version": "1.0.0",
+  "version": "2.0.6",
   "description": "",
   "main": "server.ts",
   "scripts": {
     "start": "nodemon ./server.ts",
     "sandbox": "nodemon ./tests/sandbox.ts",
     "lint": "eslint --ext .ts --ignore-path ../.gitignore .",
-    "lint fix": "eslint --ext .ts --ignore-path .eslintignore . --fix",
+    "lint-fix": "eslint --ext .ts --ignore-path .eslintignore . --fix",
     "update": "npm i -g npm-check-updates && ncu -u && npm install"
   },
   "keywords": [],
@@ -37,5 +37,15 @@
     "nodemon": "2.0.22",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.2.0"
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "unreleased": true,
+    "issueUrl": "",
+    "replaceText": {},
+    "includeBranch": [
+      "master",
+      "dev"
+    ]
   }
 }
