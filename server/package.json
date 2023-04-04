@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "server.ts",
   "scripts": {
@@ -8,7 +8,8 @@
     "sandbox": "nodemon ./tests/sandbox.ts",
     "lint": "eslint --ext .ts --ignore-path ../.gitignore .",
     "lint fix": "eslint --ext .ts --ignore-path .eslintignore . --fix",
-    "update": "npm i -g npm-check-updates && ncu -u && npm install"
+    "update": "npm i -g npm-check-updates && ncu -u && npm install",
+    "changelog": "auto-changelog --template changelog-template.hbs -p -u --commit-limit false"
   },
   "keywords": [],
   "author": "",
@@ -27,15 +28,26 @@
     "typescript": "5.0.3"
   },
   "devDependencies": {
-    "@types/cors": "2.8.13",
+    "@types/cors": "2.8.15",
     "@types/express": "4.17.17",
     "@types/node": "18.15.11",
     "@types/node-fetch": "^2.6.3",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",
+    "auto-changelog": "^2.4.0",
     "eslint": "8.37.0",
     "nodemon": "2.0.22",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.2.0"
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "unreleased": true,
+    "issueUrl": "",
+    "replaceText": {},
+    "includeBranch": [
+      "master",
+      "dev"
+    ]
   }
 }
