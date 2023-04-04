@@ -1,15 +1,14 @@
 {
   "name": "server",
-  "version": "1.0.6",
+  "version": "2.0.6",
   "description": "",
   "main": "server.ts",
   "scripts": {
     "start": "nodemon ./server.ts",
     "sandbox": "nodemon ./tests/sandbox.ts",
     "lint": "eslint --ext .ts --ignore-path ../.gitignore .",
-    "lint fix": "eslint --ext .ts --ignore-path .eslintignore . --fix",
-    "update": "npm i -g npm-check-updates && ncu -u && npm install",
-    "changelog": "auto-changelog --template changelog-template.hbs -p -u --commit-limit false"
+    "lint-fix": "eslint --ext .ts --ignore-path .eslintignore . --fix",
+    "update": "npm i -g npm-check-updates && ncu -u && npm install"
   },
   "keywords": [],
   "author": "",
@@ -34,7 +33,6 @@
     "@types/node-fetch": "^2.6.3",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",
-    "auto-changelog": "^2.4.0",
     "eslint": "8.37.0",
     "nodemon": "2.0.22",
     "ts-node": "10.9.1",
