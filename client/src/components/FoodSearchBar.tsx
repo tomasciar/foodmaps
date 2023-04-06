@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import FoodSearchBarProps from '../../../types/interfaces/FoodSearchBar';
 import { Input } from 'antd';
 import MenuItem from '../../../types/interfaces/MenuItem';
