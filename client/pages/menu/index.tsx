@@ -16,7 +16,7 @@ export default function Menu(): JSX.Element {
   const [restaurants, setRestaurants] = useState<Array<Restaurant>>(new Array());
   const [menuItems, setMenuItems] = useState<Array<MenuItem>>(new Array());
   const [filteredMenuItems, setFilteredMenuItems] = useState<Array<MenuItem>>(menuItems);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(0);
 
   useEffect(() => setFilteredMenuItems(menuItems), [menuItems]);
 
