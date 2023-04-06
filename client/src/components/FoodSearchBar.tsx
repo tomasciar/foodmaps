@@ -15,7 +15,11 @@ const FoodSearchBar: React.FC<FoodSearchBarProps> = (props: FoodSearchBarProps) 
    * @returns {Array<MenuItem>}
    */
   const filterFoodItems = (text: string, menuItems: Array<MenuItem>): Array<MenuItem> => {
-    return menuItems.filter((item: MenuItem) => item.name.toLowerCase().includes(text.toLowerCase()));
+    const inputTextLower: string = text.toLowerCase();
+    const items: Array<MenuItem> = menuItems.filter((item: MenuItem) => {
+      return item.name.toLowerCase().includes(inputTextLower);
+    });
+    return items;
   };
 
   /**
@@ -24,7 +28,7 @@ const FoodSearchBar: React.FC<FoodSearchBarProps> = (props: FoodSearchBarProps) 
    */
   const onSearch = (value: string) => {
     props.setResults(filterFoodItems(value, props.menuItems));
-    props.setPageNumber(1);
+    props.setPageNumber(0);
   };
 
   return (
