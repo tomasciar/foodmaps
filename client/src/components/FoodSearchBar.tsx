@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import FoodSearchBarProps from '../../../types/interfaces/FoodSearchBar';
 import { Input } from 'antd';
 import MenuItem from '../../../types/interfaces/MenuItem';
@@ -32,7 +31,7 @@ const FoodSearchBar: React.FC<FoodSearchBarProps> = (props: FoodSearchBarProps) 
   };
 
   return (
-    <div style={{ padding: '1rem', paddingTop: 0 }}>
+    <div style={{ padding: '0 4rem' }}>
       <Search
         placeholder='Filter food items...'
         onSearch={onSearch}

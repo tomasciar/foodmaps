@@ -53,7 +53,7 @@ const AddressInput: React.FC<AddressInputProps> = (props: AddressInputProps) => 
   }
 
   return (
-    <div style={{ padding: '1rem' }}>
+    <div style={{ padding: '0 4rem 1rem 4rem' }}>
       <GooglePlacesAutocomplete
         selectProps={{
           placeholder: 'Enter an address...',
