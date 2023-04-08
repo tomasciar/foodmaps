@@ -31,7 +31,7 @@ const FoodSearchBar: React.FC<FoodSearchBarProps> = (props: FoodSearchBarProps) 
   };
 
   return (
-    <div style={{ padding: '1rem', paddingTop: 0 }}>
+    <div style={{ padding: '0 4rem' }}>
       <Search
         placeholder='Filter food items...'
         onSearch={onSearch}
