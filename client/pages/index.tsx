@@ -21,7 +21,7 @@ export default function Home(): JSX.Element {
           href='https://fonts.googleapis.com/css?family=Inter:i,b,bi,100,200,300,400,500,600,700,800,900'></link>
       </Head>
       <main>
-        <h1>Using this website helps students like you save on food! Total estimated savings:</h1>
+        <h3>Using this website helps students like you save on food! Total estimated savings:</h3>
       </main>
     </>
   );

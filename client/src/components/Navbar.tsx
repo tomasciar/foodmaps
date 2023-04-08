@@ -10,14 +10,14 @@ const Navbar: React.FC = () => {
       <Link href='/' style={styles.logo}>
         foodmaps
       </Link>
-      <Link href='/menu' style={styles.item}>
-        menu
+      <Link href='/search' style={styles.item}>
+        search
       </Link>
       <Link href='/coupons' style={styles.item}>
         coupons
       </Link>
-      <Link href='/blog' style={styles.item}>
-        blog
+      <Link href='/tips+tricks' style={styles.item}>
+        tips + tricks
       </Link>
     </div>
   );
@@ -39,14 +39,12 @@ const styles = {
   logo: {
     color: '#d94640',
     fontSize: 30,
-    fontFamily: 'Inter',
     fontWeight: 900,
     textDecoration: 'none'
   },
 
   item: {
     color: '#444',
-    fontFamily: 'Inter',
     fontWeight: 500,
     textDecoration: 'none'
   }
