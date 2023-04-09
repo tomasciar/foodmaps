@@ -36,6 +36,13 @@
     "removeComments": true,
     "resolveJsonModule": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../helpers/**/*.ts", "../types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../helpers/**/*.ts",
+    "../types/**/*.ts",
+    "../client/src/custom.d.ts"
+  ],
   "exclude": ["node_modules"]
 }
