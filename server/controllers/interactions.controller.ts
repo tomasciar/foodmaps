@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import Interactions from '../../types/interfaces/Interactions';
 import Client from '../mongo/Client';
 
 /**
@@ -15,10 +16,21 @@ export default class InteractionsController {
 
     const value = parseInt(req.query.value as string);
 
-    const item: any = await connection
+    const rawItem: any = await connection
       .db('scrape')
       .collection('interactions')
-      .findOneAndUpdate({ _id: { $exists: true } }, { $inc: { numberOfItemsClicked: 1, valueOfItemsClicked: value } });
+      .findOneAndUpdate(
+        { _id: { $exists: true } },
+        { $inc: { numberOfItemsClicked: 1, valueOfItemsClicked: value } },
+        { returnDocument: 'after' }
+      );
+
+    const item: Interactions = {
+      numberOfItemsClicked: rawItem.numberOfItemsClicked,
+      valueOfItemsClicked: rawItem.valueOfItemsClicked,
+      numberOfCouponsClicked: rawItem.numberOfCouponsClicked,
+      valueOfCouponsClicked: rawItem.valueOfCouponsClicked
+    };
 
     return res.send(item);
   }
