@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
       <Link href='/coupons' style={styles.item}>
         coupons
       </Link>
-      <Link href='/tips+tricks' style={styles.item}>
-        tips + tricks
+      <Link href='/tips&tricks' style={styles.item}>
+        tips & tricks
       </Link>
     </div>
   );
