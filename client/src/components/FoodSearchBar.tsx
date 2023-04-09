@@ -35,7 +35,6 @@ const FoodSearchBar: React.FC<FoodSearchBarProps> = (props: FoodSearchBarProps) 
       <Search
         placeholder='Filter food items...'
         onSearch={onSearch}
-        enterButton
         size={'large'}
         disabled={props.menuItems.length === 0}
       />

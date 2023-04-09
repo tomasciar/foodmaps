@@ -31,16 +31,13 @@ export default function Menu(): JSX.Element {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
-        <link
-          rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Inter:i,b,bi,100,200,300,400,500,600,700,800,900'></link>
       </Head>
       <main>
         <AddressInput
           setRestaurants={setRestaurants}
           numberOfRestaurants={1}
           setMenuItems={setMenuItems}
-          numberOfMenuItems={250000}
+          numberOfMenuItems={1000}
         />
         <FoodSearchBar
           results={filteredMenuItems}
@@ -69,6 +66,7 @@ export default function Menu(): JSX.Element {
             {filteredMenuItems
               .map((item: MenuItem, index: number) => {
                 return (
+                  // ! CHANGE THIS LATER
                   <div onClick={() => console.log('temporary')}>
                     <MenuItemCard
                       key={index}
