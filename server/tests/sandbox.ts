@@ -8,6 +8,7 @@ import Restaurant from '../../types/interfaces/Restaurant';
 import RestaurantData from '../service/restaurantData';
 import UberEatsScraper from '../service/restaurant_scrapers/uberEatsScraper';
 import SkipTheDishesScraper from '../service/restaurant_scrapers/skipTheDishesScraper';
+import DoorDashScraper from '../service/restaurant_scrapers/doorDashScraper';
 
 // }
 
@@ -31,12 +32,10 @@ const client: MongoClient = new MongoClient(uri);
 const testMain = async () => {
   try {
     await client.connect();
-
-    // Testing body
-
-    // const ues = new UberEatsScraper(client);
+    const ues = new UberEatsScraper(client);
     const skip = new SkipTheDishesScraper(client);
-    skip.scrape();
+    const dd = new DoorDashScraper(client);
+    await Promise.all([dd.scrape()]);
   } catch (e: unknown) {
     console.error(e);
   } finally {
@@ -45,6 +44,5 @@ const testMain = async () => {
 };
 
 testMain();
-// }
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

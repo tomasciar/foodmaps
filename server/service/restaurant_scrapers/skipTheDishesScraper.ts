@@ -35,6 +35,17 @@ export default class SkipTheDishesScraper extends RestaurantScraper {
     log.setLevel(LogLevel.DEBUG);
     const requestQueue = await RequestQueue.open();
 
+    // this is not working, need to find a workaround later
+    const response = await fetch('https://api.skipthedishes.com/customer/v1/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow'
+    });
+    const data = await response.json();
+    console.log(data);
+
     const crawler = new CheerioCrawler({
       minConcurrency: 1,
       maxConcurrency: 1,
@@ -51,8 +62,10 @@ export default class SkipTheDishesScraper extends RestaurantScraper {
       requestHandler: async ({ request, $ }) => {
         log.debug(`Processing ${request.url}...`);
 
-        const listItems = $('li.gxRuzO > div > a[href]').html();
-        console.log(listItems);
+        await this.delay(1000);
+
+        const listItems = $('#rootsomething').html();
+        console.log('Log:');
       }
     });
 
