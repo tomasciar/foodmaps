@@ -1,8 +1,8 @@
 import MenuItem from '../../../types/interfaces/MenuItem';
 import { Card } from 'antd';
-import uberEatsLogo from '/images/uber_eats_logo.png';
-import skipTheDishesLogo from '/images/skip_the_dishes_logo.png';
-import doorDashLogo from '/images/doordash_logo.png';
+import uberEatsLogo from '../../public/images/uber_eats_logo.png';
+import skipTheDishesLogo from '../../public/images/skip_the_dishes_logo.png';
+import doorDashLogo from '../../public/images/doordash_logo.png';
 
 /**
  * @component MenuItemCard
