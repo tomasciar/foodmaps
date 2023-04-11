@@ -8,13 +8,13 @@ import Client from '../mongo/Client';
 export default class InteractionsController {
   /**
    * @function clickItem updates appropriate values when a menu item is clicked
-   * @returns {Promise<any>}
+   * @returns {Promise<Interactions>}
    */
   static async clickItem(req: Request, res: Response): Promise<Response<any, Record<string, any>>> {
     const mongoClient = new Client();
     const connection = await mongoClient.connect();
 
-    const value = parseInt(req.query.value as string);
+    const value = +(req.query.value as string);
 
     const rawItem: any = await connection
       .db('scrape')
@@ -25,13 +25,33 @@ export default class InteractionsController {
         { returnDocument: 'after' }
       );
 
-    const item: Interactions = {
+    const interactions: Interactions = {
       numberOfItemsClicked: rawItem.numberOfItemsClicked,
       valueOfItemsClicked: rawItem.valueOfItemsClicked,
       numberOfCouponsClicked: rawItem.numberOfCouponsClicked,
       valueOfCouponsClicked: rawItem.valueOfCouponsClicked
     };
 
-    return res.send(item);
+    return res.send(interactions);
+  }
+
+  /**
+   * @function getInteractions fetches interactions object from the database
+   * @returns {Promise<Interactions>}
+   */
+  static async getInteractions(req: Request, res: Response): Promise<Response<any, Record<string, any>>> {
+    const mongoClient = new Client();
+    const connection = await mongoClient.connect();
+
+    const rawItem: any = await connection.db('scrape').collection('interactions').findOne();
+
+    const interactions: Interactions = {
+      numberOfItemsClicked: rawItem.numberOfItemsClicked,
+      valueOfItemsClicked: rawItem.valueOfItemsClicked,
+      numberOfCouponsClicked: rawItem.numberOfCouponsClicked,
+      valueOfCouponsClicked: rawItem.valueOfCouponsClicked
+    };
+
+    return res.send(interactions);
   }
 }
