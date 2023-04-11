@@ -23,6 +23,7 @@
     "react-dom": "18.2.0",
     "react-google-places-autocomplete": "^3.4.0",
     "reactstrap": "9.1.8",
+    "sharp": "^0.32.0",
     "typescript": "5.0.4",
     "url-loader": "^4.1.1"
   },
