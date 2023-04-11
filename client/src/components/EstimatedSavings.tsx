@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getDomain } from '../../src/utils/helpers';
 import Interactions from '../../../types/interfaces/Interactions';
-import Price from '../../../types/classes/Price';
-import { NaPhoneNumber, PhoneNumber } from '../../../types/classes/PhoneNumber';
 
 /**
  * @component Landing page
@@ -10,10 +8,9 @@ import { NaPhoneNumber, PhoneNumber } from '../../../types/classes/PhoneNumber';
  */
 const EstimatedSavings: React.FC = () => {
   const CLICKS_BEFORE_PURCHASE = 13.7;
-  const pn: NaPhoneNumber = new NaPhoneNumber(911);
 
   const [time, setTime] = useState<number>(Date.now());
-  const [amountSaved, setAmountSaved] = useState<Price>(new Price(0));
+  const [amountSaved, setAmountSaved] = useState<string>('');
 
   useEffect(() => {
     const interval = setInterval(() => setTime(Date.now()), 10000);
@@ -22,7 +19,7 @@ const EstimatedSavings: React.FC = () => {
       const response = await fetch(`${getDomain()}/interactions/getInteractions`);
       const interactions: Interactions = await response.json();
 
-      const price: Price = new Price(interactions.valueOfItemsClicked / CLICKS_BEFORE_PURCHASE);
+      const price: string = '$' + (interactions.valueOfItemsClicked / CLICKS_BEFORE_PURCHASE).toFixed(2);
       setAmountSaved(price);
     })();
 
@@ -41,9 +38,7 @@ const EstimatedSavings: React.FC = () => {
         padding: '0.5rem',
         fontSize: '3rem'
       }}>
-      <div>
-        {amountSaved.formattedValue}, {pn.formattedValue}
-      </div>
+      <div>{amountSaved}</div>
     </div>
   );
 };
