@@ -6,16 +6,17 @@ import MenuItemCard from '../../src/components/MenuItemCard';
 import FoodSearchBar from '../../src/components/FoodSearchBar';
 import { Pagination } from 'antd';
 import Head from 'next/head';
+import React from 'react';
 
 /**
  * @route Menu
  * @returns {JSX.Element}
  */
 export default function Menu(): JSX.Element {
-  const NUMBER_OF_ITEMS_PER_PAGE: number = 50;
+  const NUMBER_OF_ITEMS_PER_PAGE = 50;
 
-  const [restaurants, setRestaurants] = useState<Array<Restaurant>>(new Array());
-  const [menuItems, setMenuItems] = useState<Array<MenuItem>>(new Array());
+  const [restaurants, setRestaurants] = useState<Array<Restaurant>>([]);
+  const [menuItems, setMenuItems] = useState<Array<MenuItem>>([]);
   const [filteredMenuItems, setFilteredMenuItems] = useState<Array<MenuItem>>(menuItems);
   const [pageNumber, setPageNumber] = useState(0);
 
@@ -67,7 +68,7 @@ export default function Menu(): JSX.Element {
               .map((item: MenuItem, index: number) => {
                 return (
                   // ! CHANGE THIS LATER
-                  <div onClick={() => console.log('temporary')}>
+                  <div key={index} onClick={() => console.log('temporary')}>
                     <MenuItemCard
                       key={index}
                       source={item.source}

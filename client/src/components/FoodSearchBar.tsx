@@ -1,6 +1,7 @@
 import FoodSearchBarProps from '../../../types/interfaces/FoodSearchBar';
 import { Input } from 'antd';
 import MenuItem from '../../../types/interfaces/MenuItem';
+import React from 'react';
 
 /**
  * @component FoodSearchBar

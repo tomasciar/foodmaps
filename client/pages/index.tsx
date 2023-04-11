@@ -1,9 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import bottomBorder from '../public/images/bottom_border.png';
+import Image from 'next/image';
+import EstimatedSavings from '../src/components/EstimatedSavings';
 
 /**
- * @component Landing page
+ * @component Home
  * @returns {JSX.Element}
  */
 export default function Home(): JSX.Element {
@@ -29,9 +31,7 @@ export default function Home(): JSX.Element {
       <main>
         <div style={styles.title}>Using this website helps people like you save on food!</div>
         <div style={styles.subtitle}>Total estimated savings:</div>
-        <div style={styles.valueContainer}>
-          <div>$143634.57</div>
-        </div>
+        <EstimatedSavings />
         <div style={styles.videoContainer}>
           <Video src='/videos/cutting_radish.mp4'></Video>
           <Video src='/videos/egg_cooking.mp4'></Video>
@@ -49,13 +49,11 @@ export default function Home(): JSX.Element {
           <Video src='/videos/washing_knife.mp4'></Video>
           <Video src='/videos/blueberries.mp4'></Video>
         </div>
-        <img style={styles.border} src={bottomBorder.src} />
+        <Image style={styles.border} src={bottomBorder.src} alt='bottom border' width='1000' height='200' />
       </main>
     </>
   );
 }
-
-const abs: 'absolute' = 'absolute';
 
 const styles = {
   title: {
@@ -73,17 +71,8 @@ const styles = {
     fontWeight: 500
   },
 
-  valueContainer: {
-    backgroundColor: '#d94640',
-    width: 325,
-    color: 'white',
-    margin: '4rem',
-    padding: '0.5rem',
-    fontSize: '3rem'
-  },
-
   border: {
-    position: abs,
+    position: 'absolute' as const,
     bottom: 0,
     left: 0,
     width: '110vw',
@@ -91,11 +80,11 @@ const styles = {
   },
 
   videoContainer: {
-    position: abs,
+    position: 'absolute' as const,
     width: '60vw',
     height: '105vh',
     right: -200,
-    top: -75,
+    top: -60,
     overflow: 'hidden'
   },
 
