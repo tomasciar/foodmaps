@@ -1,8 +1,21 @@
 {
   "compileOnSave": true, // change this all to match backend later where it makes sense
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es2022",
+    "lib": [
+      "es6",
+      "DOM",
+      "DOM.Iterable",
+      "ESNext",
+      "ES2015",
+      "ES2016",
+      "ES2018",
+      "ES2019.Object",
+      "ES2018.AsyncIterable",
+      "ES2020.String",
+      "ES2019.Array",
+      "es2020"
+    ],
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,
@@ -12,12 +25,13 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "removeComments": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
     "noImplicitAny": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../types/**/*.ts"],
   "exclude": ["node_modules"]
 }

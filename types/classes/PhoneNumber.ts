@@ -7,8 +7,6 @@
  */
 export abstract class PhoneNumber {
   rawValue: string | number;
-  numberValue: number;
-  formattedValue: string;
 
   constructor(value: string | number) {
     this.rawValue = value;
@@ -20,6 +18,9 @@ export abstract class PhoneNumber {
  * @description North American phone number
  */
 export class NaPhoneNumber extends PhoneNumber {
+  numberValue: number;
+  formattedValue: string;
+
   constructor(value: string | number) {
     super(value);
     this.numberValue = removeNonDigitsAndAddPrefix(value, 1);
