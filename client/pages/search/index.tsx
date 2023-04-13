@@ -67,8 +67,7 @@ export default function Menu(): JSX.Element {
             {filteredMenuItems
               .map((item: MenuItem, index: number) => {
                 return (
-                  // ! CHANGE THIS LATER
-                  <div key={index} onClick={() => console.log('temporary')}>
+                  <div key={index}>
                     <MenuItemCard
                       key={index}
                       source={item.source}

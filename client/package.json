@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@types/bson": "^4.2.0",
-    "@types/react": "^18.0.33",
+    "@types/react": "^18.0.35",
     "@types/react-dom": "18.0.11",
-    "antd": "^5.4.0",
+    "antd": "^5.4.2",
     "babel-loader": "^9.1.2",
     "cheerio": "^1.0.0-rc.12",
     "eslint-config-next": "13.3.0",
@@ -22,7 +22,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-google-places-autocomplete": "^3.4.0",
-    "reactstrap": "9.1.8",
+    "reactstrap": "9.1.9",
     "sharp": "^0.32.0",
     "typescript": "5.0.4",
     "url-loader": "^4.1.1"

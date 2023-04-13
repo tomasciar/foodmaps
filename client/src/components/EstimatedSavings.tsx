@@ -10,7 +10,7 @@ const EstimatedSavings: React.FC = () => {
   const CLICKS_BEFORE_PURCHASE = 13.7;
 
   const [time, setTime] = useState<number>(Date.now());
-  const [amountSaved, setAmountSaved] = useState<string>('');
+  const [amountSaved, setAmountSaved] = useState<string>('Calculating...');
 
   useEffect(() => {
     const interval = setInterval(() => setTime(Date.now()), 10000);
