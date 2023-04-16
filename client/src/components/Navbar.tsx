@@ -20,6 +20,9 @@ const Navbar: React.FC = () => {
       <Link href='/tips&tricks' style={styles.item}>
         tips & tricks
       </Link>
+      <Link href='/contact' style={styles.item}>
+        contact
+      </Link>
     </div>
   );
 };

@@ -137,7 +137,7 @@ export default class DoorDashScraper extends RestaurantScraper {
   }
 
   /**
-   * @function getStartUrls gets the start URLs for Uber from the json file
+   * @function getStartUrls gets the start URLs for DoorDash
    * @returns {Array<string>}
    */
   override async getStartUrls(): Promise<Array<string>> {
