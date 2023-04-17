@@ -1,5 +1,6 @@
 body {
   font-family: 'Inter', serif;
+  overflow-x: hidden;
 }
 
 html {
