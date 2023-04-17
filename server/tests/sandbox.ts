@@ -4,13 +4,11 @@ import env from 'dotenv';
 import { MongoClient } from 'mongodb';
 import Restaurant from '../../types/interfaces/Restaurant';
 
-// For testing {
 import RestaurantData from '../service/restaurantData';
 import UberEatsScraper from '../service/restaurant_scrapers/uberEatsScraper';
 import SkipTheDishesScraper from '../service/restaurant_scrapers/skipTheDishesScraper';
 import DoorDashScraper from '../service/restaurant_scrapers/doorDashScraper';
-
-// }
+import WendysScraper from '../service/coupon_scrapers/wendysScraper';
 
 // Import routes
 import test from './test.route';
@@ -35,7 +33,8 @@ const testMain = async () => {
     const ues = new UberEatsScraper(client);
     const skip = new SkipTheDishesScraper(client);
     const dd = new DoorDashScraper(client);
-    await Promise.all([dd.scrape()]);
+    const wendys = new WendysScraper(client);
+    await Promise.all([wendys.scrape()]);
   } catch (e: unknown) {
     console.error(e);
   } finally {

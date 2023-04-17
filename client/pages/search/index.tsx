@@ -67,20 +67,18 @@ export default function Menu(): JSX.Element {
             {filteredMenuItems
               .map((item: MenuItem, index: number) => {
                 return (
-                  <div key={index}>
-                    <MenuItemCard
-                      key={index}
-                      source={item.source}
-                      date={item.date}
-                      fromRestaurant={item.fromRestaurant}
-                      name={item.name}
-                      description={item.description}
-                      price={item.price}
-                      category={item.category}
-                      geolocation={item.geolocation}
-                      url={item.url}
-                    />
-                  </div>
+                  <MenuItemCard
+                    key={index}
+                    source={item.source}
+                    date={item.date}
+                    fromRestaurant={item.fromRestaurant}
+                    name={item.name}
+                    description={item.description}
+                    price={item.price}
+                    category={item.category}
+                    geolocation={item.geolocation}
+                    url={item.url}
+                  />
                 );
               })
               .slice(pageNumber * NUMBER_OF_ITEMS_PER_PAGE, (pageNumber + 1) * NUMBER_OF_ITEMS_PER_PAGE)}
