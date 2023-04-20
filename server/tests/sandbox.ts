@@ -9,6 +9,8 @@ import UberEatsScraper from '../service/restaurant_scrapers/uberEatsScraper';
 import SkipTheDishesScraper from '../service/restaurant_scrapers/skipTheDishesScraper';
 import DoorDashScraper from '../service/restaurant_scrapers/doorDashScraper';
 import WendysScraper from '../service/coupon_scrapers/wendysScraper';
+import McDonaldsScraper from '../service/coupon_scrapers/mcdonaldsScraper';
+import KfcScraper from '../service/coupon_scrapers/kfcScraper';
 
 // Import routes
 import test from './test.route';
@@ -34,7 +36,9 @@ const testMain = async () => {
     const skip = new SkipTheDishesScraper(client);
     const dd = new DoorDashScraper(client);
     const wendys = new WendysScraper(client);
-    await Promise.all([wendys.scrape()]);
+    const mcdonalds = new McDonaldsScraper(client);
+    const kfc = new KfcScraper(client);
+    await Promise.all([kfc.scrape()]);
   } catch (e: unknown) {
     console.error(e);
   } finally {

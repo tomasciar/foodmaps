@@ -2,6 +2,8 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import wendysLogo from '../../public/images/wendys_logo.png';
+import mcdonaldsLogo from '../../public/images/mcdonalds_logo.png';
+import kfcLogo from '../../public/images/kfc_logo.png';
 import CouponModal from '../../src/components/CouponModal';
 
 /**
@@ -21,8 +23,10 @@ export default function Coupons(): JSX.Element {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div style={{ padding: '2rem 5rem' }}>
+        <div style={{ padding: '2rem 4rem' }}>
           <CouponModal source="Wendy's" image={wendysLogo} imageHeight={40} imageWidth={120} />
+          <CouponModal source="McDonald's" image={mcdonaldsLogo} imageHeight={60} imageWidth={68} />
+          <CouponModal source='KFC' image={kfcLogo} imageHeight={31} imageWidth={100} />
         </div>
       </main>
     </>
