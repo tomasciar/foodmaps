@@ -1,0 +1,51 @@
+query evaluateAllUserOffers {
+  evaluateAllUserOffers(
+    locale: $locale
+    platform: $platform
+    redeemedOn: $redeemedOn
+    serviceMode: $serviceMode
+    storeId: $storeId
+  ) {
+    offersFeedback {
+      cartEntry {
+        cartId: lineId
+        __typename
+      }
+      _id: couponId
+      tokenId
+      couponId
+      offerDetails
+      offerState
+      offerVariables {
+        key
+        type
+        value
+        __typename
+      }
+      rank
+      redemptionEligibility {
+        isRedeemable
+        isValid
+        evaluationFeedback {
+          code
+          condition
+          message
+          redeemableForSeconds
+          redeemableInSeconds
+          ruleSetType
+          sanityId
+          __typename
+        }
+        validationErrors {
+          code
+          message
+          ruleSetType
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
