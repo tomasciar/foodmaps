@@ -36,7 +36,8 @@ const CouponModal: React.FC<CouponModalProps> = (props: CouponModalProps) => {
         style={{
           cursor: 'pointer',
           backgroundColor: 'transparent',
-          border: 'none'
+          border: 'none',
+          margin: '1rem'
         }}
         onClick={() => setIsModalOpen(true)}>
         <Image height={props.imageHeight} width={props.imageWidth} src={props.image} alt={`${props.source} logo`} />
