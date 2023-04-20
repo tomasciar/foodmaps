@@ -19,8 +19,9 @@ const CouponCard: React.FC<Coupon> = (props: Coupon) => {
 
   return (
     <a href={props.url} target='_blank' rel='noreferrer' style={{ textDecoration: 'none' }}>
-      <Card style={{ width: 433, height: 150, margin: '1rem' }} onClick={async () => await clickCoupon()}>
-        <p>{props.description.length > 120 ? `${props.description.slice(0, 120)}...` : props.description}</p>
+      <Card style={{ width: 433, margin: '1rem' }} onClick={async () => await clickCoupon()}>
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
       </Card>
     </a>
   );
