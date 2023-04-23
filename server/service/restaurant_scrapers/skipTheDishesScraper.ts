@@ -125,7 +125,7 @@ export default class SkipTheDishesScraper extends RestaurantScraper {
             latitude: item.location.position.latitude,
             longitude: item.location.position.longitude
           },
-          url: `https://www.skipthedishes.com/waterloo/restaurants/${item.cleanUrl}`,
+          url: `https://www.skipthedishes.com/${item.cleanUrl}`,
           imageUrl: item.imageUrls.menuSmallUrl,
           phoneNumber: new NaPhoneNumber(responseData2.contactInfo.phoneNumber)
         });
