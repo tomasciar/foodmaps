@@ -9,7 +9,7 @@ import { MongoClient } from 'mongodb';
 export default class MenuItemData implements Required<MenuItem> {
   source: string;
   date: Date;
-  fromRestaurant: URL;
+  fromRestaurant: string;
   name: string;
   description: string;
   price: Price;

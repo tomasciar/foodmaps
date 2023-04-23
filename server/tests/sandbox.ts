@@ -40,7 +40,7 @@ const testMain = async () => {
     const mcdonalds = new McDonaldsScraper(client);
     const kfc = new KfcScraper(client);
     const popeyes = new PopeyesScraper(client);
-    await Promise.all([popeyes.scrape()]);
+    await Promise.all([skip.scrape()]);
   } catch (e: unknown) {
     console.error(e);
   } finally {

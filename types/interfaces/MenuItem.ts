@@ -7,7 +7,7 @@ import Geolocation from './Geolocation';
 export default interface MenuItem {
   readonly source: string;
   readonly date: Date;
-  readonly fromRestaurant: URL;
+  readonly fromRestaurant: string;
   readonly name: string;
   readonly description: string;
   readonly price: Price;
