@@ -24,7 +24,7 @@ const MenuItemCard: React.FC<MenuItem> = (props: MenuItem) => {
     <a href={props.url} target='_blank' rel='noreferrer' style={{ textDecoration: 'none' }}>
       <Card style={{ width: 300, height: 250, margin: '1rem' }} onClick={async () => await clickItem()}>
         <Image
-          width={props.source === 'UberEats' ? 70 : 100}
+          width={props.source === 'UberEats' ? 70 : props.source === 'DoorDash' ? 100 : 60}
           height={15}
           src={
             props.source === 'UberEats'
