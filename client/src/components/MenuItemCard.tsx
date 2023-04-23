@@ -22,7 +22,7 @@ const MenuItemCard: React.FC<MenuItem> = (props: MenuItem) => {
 
   return (
     <a href={props.url} target='_blank' rel='noreferrer' style={{ textDecoration: 'none' }}>
-      <Card style={{ width: 300, height: 250, margin: '1rem' }} onClick={async () => await clickItem()}>
+      <Card style={{ width: 300, height: 300, margin: '1rem' }} onClick={async () => await clickItem()}>
         <Image
           width={props.source === 'UberEats' ? 70 : props.source === 'DoorDash' ? 100 : 60}
           height={15}
@@ -36,7 +36,12 @@ const MenuItemCard: React.FC<MenuItem> = (props: MenuItem) => {
           alt={`${props.source} logo`}
           style={{ height: 12 }}
         />
-        <p>{props.name}</p>
+        <p>
+          <b>{props.name}</b>
+        </p>
+        <a href={props.fromRestaurant.url} target='_blank'>
+          <p>{props.fromRestaurant.name}</p>
+        </a>
         <p>{props.description.length > 120 ? `${props.description.slice(0, 120)}...` : props.description}</p>
         <p>{`${props.price.formattedValue}`}</p>
       </Card>

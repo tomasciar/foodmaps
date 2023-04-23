@@ -120,7 +120,10 @@ export default class UberEatsScraper extends RestaurantScraper {
               const menuItem: MenuItem = new MenuItemData({
                 source: this.source,
                 date: new Date(),
-                fromRestaurant: restaurantData.url,
+                fromRestaurant: {
+                  name: restaurant.name,
+                  url: restaurant.url
+                },
                 name: item.name,
                 description: item.description,
                 price: new Price(item.offers.price),

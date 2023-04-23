@@ -137,7 +137,10 @@ export default class SkipTheDishesScraper extends RestaurantScraper {
             const menuItem: MenuItem = new MenuItemData({
               source: this.source,
               date: new Date(),
-              fromRestaurant: restaurant.url,
+              fromRestaurant: {
+                name: restaurant.name,
+                url: restaurant.url
+              },
               name: subitem.name,
               description: subitem.description,
               price: new Price(subitem.centsPrice / 100),
