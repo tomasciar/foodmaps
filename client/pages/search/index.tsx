@@ -8,6 +8,8 @@ import { Pagination } from 'antd';
 import Head from 'next/head';
 import React from 'react';
 import FilterDropdown from '../../src/components/FilterDropdown';
+import BogoCheckbox from '../../src/components/BogoCheckbox';
+import ShuffleMenu from '../../src/components/ShuffleMenu';
 
 /**
  * @route Menu
@@ -39,7 +41,7 @@ export default function Menu(): JSX.Element {
           setRestaurants={setRestaurants}
           numberOfRestaurants={500}
           setMenuItems={setMenuItems}
-          numberOfMenuItems={2000}
+          numberOfMenuItems={25000}
         />
         <FoodSearchBar
           results={filteredMenuItems}
@@ -48,7 +50,14 @@ export default function Menu(): JSX.Element {
           setMenuItems={setMenuItems}
           setPageNumber={setPageNumber}
         />
-        <div style={{ padding: '1.5rem 4rem', display: 'flex', flexDirection: 'row' }}>
+        <div
+          style={{
+            padding: '1.5rem 4rem',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+            alignItems: 'center'
+          }}>
           <Pagination
             style={{ marginRight: '1rem' }}
             defaultCurrent={1}
@@ -58,15 +67,29 @@ export default function Menu(): JSX.Element {
             hideOnSinglePage={true}
             showSizeChanger={false}
           />
-          <FilterDropdown
-            disabled={menuItems.length === 0}
-            restaurants={restaurants}
-            results={filteredMenuItems}
-            setResults={setFilteredMenuItems}
-            menuItems={menuItems}
-            setMenuItems={setMenuItems}
-            setPageNumber={setPageNumber}
-          />
+          <div style={{ display: 'flex', flexDirection: 'row', columnGap: '1rem', alignItems: 'center' }}>
+            <FilterDropdown
+              disabled={menuItems.length === 0}
+              restaurants={restaurants}
+              results={filteredMenuItems}
+              setResults={setFilteredMenuItems}
+              menuItems={menuItems}
+              setMenuItems={setMenuItems}
+              setPageNumber={setPageNumber}
+            />
+            <ShuffleMenu
+              disabled={menuItems.length === 0}
+              setResults={setFilteredMenuItems}
+              menuItems={menuItems}
+              setPageNumber={setPageNumber}
+            />
+            <BogoCheckbox
+              disabled={menuItems.length === 0}
+              setResults={setFilteredMenuItems}
+              menuItems={menuItems}
+              setPageNumber={setPageNumber}
+            />
+          </div>
         </div>
         <div
           style={{
