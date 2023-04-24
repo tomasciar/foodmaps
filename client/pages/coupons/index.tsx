@@ -6,6 +6,7 @@ import mcdonaldsLogo from '../../public/images/mcdonalds_logo.png';
 import kfcLogo from '../../public/images/kfc_logo.png';
 import popeyesLogo from '../../public/images/popeyes_logo.png';
 import dominosLogo from '../../public/images/dominos_logo.png';
+import pizzaHutLogo from '../../public/images/pizzahut_logo.png';
 import CouponModal from '../../src/components/CouponModal';
 
 /**
@@ -31,6 +32,7 @@ export default function Coupons(): JSX.Element {
           <CouponModal source='KFC' image={kfcLogo} imageHeight={31} imageWidth={100} />
           <CouponModal source='Popeyes' image={popeyesLogo} imageHeight={93} imageWidth={84} />
           <CouponModal source="Domino's" image={dominosLogo} imageHeight={80} imageWidth={80} />
+          <CouponModal source='Pizza Hut' image={pizzaHutLogo} imageHeight={72} imageWidth={90} />
         </div>
       </main>
     </>
