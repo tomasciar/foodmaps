@@ -32,7 +32,7 @@ export default class DominosScraper extends CouponScraper {
         source: this.source,
         date: new Date(),
         title: data.Coupons[index].Code,
-        description: data.Coupons[index].Name + ' - $' + data.Coupons[index].Price,
+        description: data.Coupons[index].Name + ' - $' + data.Coupons[index].Price.toFixed(2),
         url: url
       });
 

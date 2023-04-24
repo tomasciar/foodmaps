@@ -7,6 +7,8 @@ import kfcLogo from '../../public/images/kfc_logo.png';
 import popeyesLogo from '../../public/images/popeyes_logo.png';
 import dominosLogo from '../../public/images/dominos_logo.png';
 import pizzaHutLogo from '../../public/images/pizzahut_logo.png';
+import tacoBellLogo from '../../public/images/taco_bell_logo.png';
+import buffaloWildWingsLogo from '../../public/images/buffalo_wild_wings_logo.png';
 import CouponModal from '../../src/components/CouponModal';
 
 /**
@@ -26,13 +28,24 @@ export default function Coupons(): JSX.Element {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div style={{ padding: '2rem 4rem', justifyContent: 'center', alignItems: 'center' }}>
-          <CouponModal source="Wendy's" image={wendysLogo} imageHeight={40} imageWidth={120} />
-          <CouponModal source="McDonald's" image={mcdonaldsLogo} imageHeight={60} imageWidth={68} />
-          <CouponModal source='KFC' image={kfcLogo} imageHeight={31} imageWidth={100} />
-          <CouponModal source='Popeyes' image={popeyesLogo} imageHeight={93} imageWidth={84} />
-          <CouponModal source="Domino's" image={dominosLogo} imageHeight={80} imageWidth={80} />
-          <CouponModal source='Pizza Hut' image={pizzaHutLogo} imageHeight={72} imageWidth={90} />
+        <div
+          style={{
+            padding: '2rem 4rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column'
+          }}>
+          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+            <CouponModal source="Wendy's" image={wendysLogo} imageHeight={60} imageWidth={180} />
+            <CouponModal source="McDonald's" image={mcdonaldsLogo} imageHeight={80} imageWidth={90} />
+            <CouponModal source='KFC' image={kfcLogo} imageHeight={50} imageWidth={166} />
+            <CouponModal source='Popeyes' image={popeyesLogo} imageHeight={100} imageWidth={91} />
+            <CouponModal source="Domino's" image={dominosLogo} imageHeight={100} imageWidth={100} />
+            <CouponModal source='Pizza Hut' image={pizzaHutLogo} imageHeight={82} imageWidth={100} />
+            <CouponModal source='Taco Bell' image={tacoBellLogo} imageHeight={100} imageWidth={68} />
+            <CouponModal source='Buffalo Wild Wings' image={buffaloWildWingsLogo} imageHeight={100} imageWidth={175} />
+          </div>
         </div>
       </main>
     </>

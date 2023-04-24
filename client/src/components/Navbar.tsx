@@ -34,7 +34,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-start',
     columnGap: '3.25rem',
-    paddingLeft: '4rem'
+    paddingLeft: '4rem',
+    flexWrap: 'wrap'
   },
 
   logo: {

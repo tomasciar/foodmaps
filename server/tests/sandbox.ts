@@ -12,6 +12,8 @@ import KfcScraper from '../service/coupon_scrapers/kfcScraper';
 import PopeyesScraper from '../service/coupon_scrapers/popeyesScraper';
 import DominosScraper from '../service/coupon_scrapers/dominosScraper';
 import PizzaHutScraper from '../service/coupon_scrapers/pizzaHut.scraper';
+import TacoBellScraper from '../service/coupon_scrapers/tacoBellScraper';
+import BuffaloWildWingsScraper from '../service/coupon_scrapers/buffaloWildWingsScraper';
 
 // Import routes
 import test from './test.route';
@@ -42,7 +44,9 @@ const testMain = async () => {
     const popeyes = new PopeyesScraper(client);
     const dominos = new DominosScraper(client);
     const pizzahut = new PizzaHutScraper(client);
-    await Promise.all([pizzahut.scrape()]);
+    const tb = new TacoBellScraper(client);
+    const bww = new BuffaloWildWingsScraper(client);
+    await Promise.all([bww.scrape()]);
   } catch (e: unknown) {
     console.error(e);
   } finally {
