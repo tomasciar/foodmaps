@@ -7,6 +7,7 @@ import FoodSearchBar from '../../src/components/FoodSearchBar';
 import { Pagination } from 'antd';
 import Head from 'next/head';
 import React from 'react';
+import FilterDropdown from '../../src/components/FilterDropdown';
 
 /**
  * @route Menu
@@ -36,9 +37,9 @@ export default function Menu(): JSX.Element {
       <main>
         <AddressInput
           setRestaurants={setRestaurants}
-          numberOfRestaurants={1}
+          numberOfRestaurants={500}
           setMenuItems={setMenuItems}
-          numberOfMenuItems={1000}
+          numberOfMenuItems={2000}
         />
         <FoodSearchBar
           results={filteredMenuItems}
@@ -47,8 +48,9 @@ export default function Menu(): JSX.Element {
           setMenuItems={setMenuItems}
           setPageNumber={setPageNumber}
         />
-        <div style={{ padding: '2rem 4rem' }}>
+        <div style={{ padding: '1.5rem 4rem', display: 'flex', flexDirection: 'row' }}>
           <Pagination
+            style={{ marginRight: '1rem' }}
             defaultCurrent={1}
             onChange={value => setPageNumber(value - 1)}
             pageSize={50}
@@ -56,33 +58,43 @@ export default function Menu(): JSX.Element {
             hideOnSinglePage={true}
             showSizeChanger={false}
           />
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              flexWrap: 'wrap',
-              alignItems: 'center',
-              justifyContent: 'start'
-            }}>
-            {filteredMenuItems
-              .map((item: MenuItem, index: number) => {
-                return (
-                  <MenuItemCard
-                    key={index}
-                    source={item.source}
-                    date={item.date}
-                    fromRestaurant={item.fromRestaurant}
-                    name={item.name}
-                    description={item.description}
-                    price={item.price}
-                    category={item.category}
-                    geolocation={item.geolocation}
-                    url={item.url}
-                  />
-                );
-              })
-              .slice(pageNumber * NUMBER_OF_ITEMS_PER_PAGE, (pageNumber + 1) * NUMBER_OF_ITEMS_PER_PAGE)}
-          </div>
+          <FilterDropdown
+            disabled={menuItems.length === 0}
+            restaurants={restaurants}
+            results={filteredMenuItems}
+            setResults={setFilteredMenuItems}
+            menuItems={menuItems}
+            setMenuItems={setMenuItems}
+            setPageNumber={setPageNumber}
+          />
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'start',
+            margin: '0 6rem 1rem 6rem'
+          }}>
+          {filteredMenuItems
+            .map((item: MenuItem, index: number) => {
+              return (
+                <MenuItemCard
+                  key={index}
+                  source={item.source}
+                  date={item.date}
+                  fromRestaurant={item.fromRestaurant}
+                  name={item.name}
+                  description={item.description}
+                  price={item.price}
+                  category={item.category}
+                  geolocation={item.geolocation}
+                  url={item.url}
+                />
+              );
+            })
+            .slice(pageNumber * NUMBER_OF_ITEMS_PER_PAGE, (pageNumber + 1) * NUMBER_OF_ITEMS_PER_PAGE)}
         </div>
       </main>
     </>

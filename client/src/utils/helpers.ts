@@ -1,3 +1,5 @@
+import { Type } from 'typescript';
+
 /**
  * Determines the domain of the current environment.
  * @function getDomain
@@ -22,3 +24,22 @@ export const log = (...args: any[]): void => {
     }
   }
 };
+
+/**
+ * @function shuffle shuffles the content of an array
+ * @param {Array<Type>}
+ * @returns {Array<Type>}
+ */
+export function shuffle(array: Array<Type>): Array<Type> {
+  let currentIndex: number = array.length,
+    randomIndex;
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}

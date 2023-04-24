@@ -19,7 +19,9 @@ const EstimatedSavings: React.FC = () => {
       const response = await fetch(`${getDomain()}/interactions/getInteractions`);
       const interactions: Interactions = await response.json();
 
-      const price: string = '$' + (interactions.valueOfItemsClicked / CLICKS_BEFORE_PURCHASE).toFixed(2);
+      const price: string =
+        '$' +
+        (interactions.valueOfItemsClicked / CLICKS_BEFORE_PURCHASE + interactions.numberOfCouponsClicked).toFixed(2);
       setAmountSaved(price);
     })();
 

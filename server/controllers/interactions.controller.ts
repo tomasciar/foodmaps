@@ -16,23 +16,25 @@ export default class InteractionsController {
 
     const value = +(req.query.value as string);
 
-    const rawItem: any = await connection
-      .db('scrape')
-      .collection('interactions')
-      .findOneAndUpdate(
-        { _id: { $exists: true } },
-        { $inc: { numberOfItemsClicked: 1, valueOfItemsClicked: value } },
-        { returnDocument: 'after' }
-      );
+    if (typeof value === 'number') {
+      const rawItem: any = await connection
+        .db('scrape')
+        .collection('interactions')
+        .findOneAndUpdate(
+          { _id: { $exists: true } },
+          { $inc: { numberOfItemsClicked: 1, valueOfItemsClicked: value } },
+          { returnDocument: 'after' }
+        );
 
-    const interactions: Interactions = {
-      numberOfItemsClicked: rawItem.numberOfItemsClicked,
-      valueOfItemsClicked: rawItem.valueOfItemsClicked,
-      numberOfCouponsClicked: rawItem.numberOfCouponsClicked,
-      valueOfCouponsClicked: rawItem.valueOfCouponsClicked
-    };
+      const interactions: Interactions = {
+        numberOfItemsClicked: rawItem.numberOfItemsClicked,
+        valueOfItemsClicked: rawItem.valueOfItemsClicked,
+        numberOfCouponsClicked: rawItem.numberOfCouponsClicked,
+        valueOfCouponsClicked: rawItem.valueOfCouponsClicked
+      };
 
-    return res.send(interactions);
+      return res.send(interactions);
+    }
   }
 
   /**
