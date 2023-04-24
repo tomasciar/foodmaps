@@ -109,7 +109,10 @@ export default class DoorDashScraper extends RestaurantScraper {
             const menuItem: MenuItem = new MenuItemData({
               source: this.source,
               date: new Date(),
-              fromRestaurant: restaurantData.url,
+              fromRestaurant: {
+                name: restaurant.name,
+                url: restaurant.url
+              },
               name: $(item).find('h3').text(),
               description: $(item).find('span[data-telemetry-id="storeMenuItem.subtitle"]').text(),
               price: new Price($(item).find('span[data-anchor-id="StoreMenuItemPrice"]').text()),

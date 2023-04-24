@@ -6,3 +6,8 @@ body {
 html {
   overflow-x: hidden;
 }
+
+.ant-dropdown-menu {
+  max-height: 300px;
+  overflow: auto;
+}

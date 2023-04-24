@@ -16,8 +16,8 @@ export default class RestaurantData implements Required<Restaurant> {
   foodCategories: Array<string>;
   address: object;
   geolocation: Geolocation;
-  url: URL;
-  imageUrl: URL;
+  url: string;
+  imageUrl: string;
   phoneNumber: PhoneNumber;
 
   constructor(props: Restaurant) {

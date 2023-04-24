@@ -2,6 +2,7 @@ import Price from '../../types/classes/Price';
 import MenuItem from '../../types/interfaces/MenuItem';
 import Geolocation from '../../types/interfaces/Geolocation';
 import { MongoClient } from 'mongodb';
+import FromRestaurant from '../../types/interfaces/FromRestaurant';
 
 /**
  * @class MenuItemData
@@ -9,7 +10,7 @@ import { MongoClient } from 'mongodb';
 export default class MenuItemData implements Required<MenuItem> {
   source: string;
   date: Date;
-  fromRestaurant: URL;
+  fromRestaurant: FromRestaurant;
   name: string;
   description: string;
   price: Price;

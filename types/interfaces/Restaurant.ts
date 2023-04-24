@@ -14,7 +14,7 @@ export default interface Restaurant {
   readonly foodCategories: Array<string>;
   readonly address: object;
   readonly geolocation: Geolocation;
-  readonly url: URL;
-  readonly imageUrl: URL;
+  readonly url: string;
+  readonly imageUrl: string;
   readonly phoneNumber: PhoneNumber;
 }

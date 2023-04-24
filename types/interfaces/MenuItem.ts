@@ -1,4 +1,5 @@
 import Price from '../classes/Price';
+import FromRestaurant from './FromRestaurant';
 import Geolocation from './Geolocation';
 
 /**
@@ -7,7 +8,7 @@ import Geolocation from './Geolocation';
 export default interface MenuItem {
   readonly source: string;
   readonly date: Date;
-  readonly fromRestaurant: URL;
+  readonly fromRestaurant: FromRestaurant;
   readonly name: string;
   readonly description: string;
   readonly price: Price;

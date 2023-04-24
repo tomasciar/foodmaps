@@ -1,0 +1,42 @@
+query QueryRestaurantsCuisinesList {
+  restaurantsList(
+    restaurantsParams: {
+      city: "waterloo"
+      dateTime: 0
+      isDelivery: true
+      latitude: 43.4734487
+      longitude: -80.5358191
+      province: "ON"
+      search: ""
+    }
+  ) {
+    closedRestaurants {
+      cleanUrl
+      id
+      cuisines
+      location {
+        name
+        position {
+          latitude
+          longitude
+        }
+      }
+      name
+      skipScore
+    }
+    openRestaurants {
+      cleanUrl
+      id
+      cuisines
+      location {
+        name
+        position {
+          latitude
+          longitude
+        }
+      }
+      name
+      skipScore
+    }
+  }
+}
