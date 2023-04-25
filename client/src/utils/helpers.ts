@@ -4,7 +4,7 @@
  * @returns {string} the domain of the current environment
  */
 export const getDomain = (): string => {
-  if (process.env.NODE_ENV === 'production') return 'https://foodmaps.com';
+  if (process.env.NODE_ENV === 'production') return 'https://food-maps.com';
   return `http://localhost:${process.env.NEXT_PUBLIC_PORT}`;
 };
 
