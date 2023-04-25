@@ -33,7 +33,7 @@ const MenuItemCard: React.FC<MenuItem> = (props: MenuItem) => {
         <p>
           <b>{props.name}</b>
         </p>
-        <a href={props.fromRestaurant.url} target='_blank' rel='noreferror'>
+        <a href={props.fromRestaurant.url}>
           <p>{props.fromRestaurant.name}</p>
         </a>
         <p>{props.description.length > 120 ? `${props.description.slice(0, 120)}...` : props.description}</p>
