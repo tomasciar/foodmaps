@@ -1,8 +1,8 @@
 import MenuItem from '../../../types/interfaces/MenuItem';
 import { Card } from 'antd';
-import uberEatsLogo from '../../public/images/uber_eats_logo.png';
-import skipTheDishesLogo from '../../public/images/skip_the_dishes_logo.png';
-import doorDashLogo from '../../public/images/doordash_logo.png';
+import uel from '../../public/images/uber_eats_logo.png';
+import stdl from '../../public/images/skip_the_dishes_logo.png';
+import ddl from '../../public/images/doordash_logo.png';
 import { getDomain } from '../utils/helpers';
 import Image from 'next/image';
 import React from 'react';
@@ -26,20 +26,14 @@ const MenuItemCard: React.FC<MenuItem> = (props: MenuItem) => {
         <Image
           width={props.source === 'UberEats' ? 70 : props.source === 'DoorDash' ? 100 : 60}
           height={15}
-          src={
-            props.source === 'UberEats'
-              ? uberEatsLogo.src
-              : props.source === 'DoorDash'
-              ? doorDashLogo.src
-              : skipTheDishesLogo.src
-          }
+          src={props.source === 'UberEats' ? uel.src : props.source === 'DoorDash' ? ddl.src : stdl.src}
           alt={`${props.source} logo`}
           style={{ height: 12 }}
         />
         <p>
           <b>{props.name}</b>
         </p>
-        <a href={props.fromRestaurant.url} target='_blank'>
+        <a href={props.fromRestaurant.url} target='_blank' rel='noreferror'>
           <p>{props.fromRestaurant.name}</p>
         </a>
         <p>{props.description.length > 120 ? `${props.description.slice(0, 120)}...` : props.description}</p>

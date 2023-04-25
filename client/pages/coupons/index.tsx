@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React from 'react';
 import wendysLogo from '../../public/images/wendys_logo.png';
 import mcdonaldsLogo from '../../public/images/mcdonalds_logo.png';
 import kfcLogo from '../../public/images/kfc_logo.png';
