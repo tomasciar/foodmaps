@@ -37,7 +37,7 @@ export default function Home(): JSX.Element {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div style={styles.title}>Using this website helps people like you save on food!</div>
+        <div style={styles.title}>Using this helps people like you save on food!</div>
         <div style={styles.subtitle}>Total estimated savings:</div>
         <EstimatedSavings />
         <div
@@ -79,8 +79,8 @@ export default function Home(): JSX.Element {
 const styles = {
   title: {
     fontSize: '2.75rem',
-    width: '40vw',
-    margin: '4rem',
+    maxWidth: '36vw',
+    margin: '2rem 4rem',
     fontWeight: 300
   },
 
@@ -88,7 +88,7 @@ const styles = {
     fontSize: '2.5rem',
     color: '#d94640',
     width: '40vw',
-    margin: '4rem',
+    margin: '3rem 4rem',
     fontWeight: 500
   },
 
