@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import React from 'react';
-import wendysLogo from '../../public/images/wendys_logo.png';
-import mcdonaldsLogo from '../../public/images/mcdonalds_logo.png';
-import kfcLogo from '../../public/images/kfc_logo.png';
-import popeyesLogo from '../../public/images/popeyes_logo.png';
-import dominosLogo from '../../public/images/dominos_logo.png';
-import pizzaHutLogo from '../../public/images/pizzahut_logo.png';
-import tacoBellLogo from '../../public/images/taco_bell_logo.png';
-import buffaloWildWingsLogo from '../../public/images/buffalo_wild_wings_logo.png';
+import wendysLogo from '../../public/images/logos/wendys_logo.png';
+import mcdonaldsLogo from '../../public/images/logos/mcdonalds_logo.png';
+import kfcLogo from '../../public/images/logos/kfc_logo.png';
+import popeyesLogo from '../../public/images/logos/popeyes_logo.png';
+import dominosLogo from '../../public/images/logos/dominos_logo.png';
+import pizzaHutLogo from '../../public/images/logos/pizzahut_logo.png';
+import tacoBellLogo from '../../public/images/logos/taco_bell_logo.png';
+import buffaloWildWingsLogo from '../../public/logos/images/buffalo_wild_wings_logo.png';
 import CouponModal from '../../src/components/CouponModal';
 
 /**
