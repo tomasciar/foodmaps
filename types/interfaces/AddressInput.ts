@@ -1,4 +1,3 @@
-import { Dispatch } from 'react';
 import Restaurant from './Restaurant';
 import MenuItem from './MenuItem';
 
@@ -7,7 +6,7 @@ import MenuItem from './MenuItem';
  */
 export default interface AddressInputProps {
   numberOfRestaurants: number;
-  setRestaurants: Dispatch<Array<Restaurant>>;
+  setRestaurants: (value: Array<Restaurant>) => void;
   numberOfMenuItems: number;
-  setMenuItems: Dispatch<Array<MenuItem>>;
+  setMenuItems: (value: Array<MenuItem>) => void;
 }
