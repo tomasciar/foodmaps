@@ -1,8 +1,6 @@
 import Coupon from '../../../types/interfaces/Coupon';
 import { Card } from 'antd';
-import wendysLogo from '../../public/images/wendys_logo.png';
 import { getDomain } from '../utils/helpers';
-import Image from 'next/image';
 import React from 'react';
 
 /**

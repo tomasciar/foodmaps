@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { getDomain } from '../../src/utils/helpers';
 import Interactions from '../../../types/interfaces/Interactions';
