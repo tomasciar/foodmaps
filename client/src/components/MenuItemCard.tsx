@@ -1,8 +1,8 @@
 import MenuItem from '../../../types/interfaces/MenuItem';
 import { Card } from 'antd';
-import uel from '../../public/images/uber_eats_logo.png';
-import stdl from '../../public/images/skip_the_dishes_logo.png';
-import ddl from '../../public/images/doordash_logo.png';
+import uel from '../../public/images/logos/uber_eats_logo.png';
+import stdl from '../../public/images/logos/skip_the_dishes_logo.png';
+import ddl from '../../public/images/logos/doordash_logo.png';
 import { getDomain } from '../utils/helpers';
 import Image from 'next/image';
 import React from 'react';
