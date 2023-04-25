@@ -1,4 +1,3 @@
-import { Dispatch } from 'react';
 import MenuItem from './MenuItem';
 
 /**
@@ -6,7 +5,7 @@ import MenuItem from './MenuItem';
  */
 export default interface ShuffleMenuProps {
   disabled: boolean;
-  setResults: Dispatch<Array<MenuItem>>;
+  setResults: (value: Array<MenuItem>) => void;
   menuItems: Array<MenuItem>;
-  setPageNumber: Dispatch<number>;
+  setPageNumber: (value: number) => void;
 }

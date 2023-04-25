@@ -1,4 +1,3 @@
-import { Dispatch } from 'react';
 import MenuItem from './MenuItem';
 import Restaurant from './Restaurant';
 
@@ -8,9 +7,9 @@ import Restaurant from './Restaurant';
 export default interface FilterDropdownProps {
   disabled: boolean;
   results: Array<MenuItem>;
-  setResults: Dispatch<Array<MenuItem>>;
+  setResults: (value: Array<MenuItem>) => void;
   restaurants: Array<Restaurant>;
   menuItems: Array<MenuItem>;
-  setMenuItems: Dispatch<Array<MenuItem>>;
-  setPageNumber: Dispatch<number>;
+  setMenuItems: (value: Array<MenuItem>) => void;
+  setPageNumber: (value: number) => void;
 }

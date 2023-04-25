@@ -1,4 +1,3 @@
-import { Dispatch } from 'react';
 import MenuItem from './MenuItem';
 
 /**
@@ -6,8 +5,8 @@ import MenuItem from './MenuItem';
  */
 export default interface FoodSearchBarProps {
   results: Array<MenuItem>;
-  setResults: Dispatch<Array<MenuItem>>;
+  setResults: (value: Array<MenuItem>) => void;
   menuItems: Array<MenuItem>;
-  setMenuItems: Dispatch<Array<MenuItem>>;
-  setPageNumber: Dispatch<number>;
+  setMenuItems: (value: Array<MenuItem>) => void;
+  setPageNumber: (value: number) => void;
 }
