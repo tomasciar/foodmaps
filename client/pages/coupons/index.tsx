@@ -7,7 +7,7 @@ import popeyesLogo from '../../public/images/logos/popeyes_logo.png';
 import dominosLogo from '../../public/images/logos/dominos_logo.png';
 import pizzaHutLogo from '../../public/images/logos/pizzahut_logo.png';
 import tacoBellLogo from '../../public/images/logos/taco_bell_logo.png';
-import buffaloWildWingsLogo from '../../public/logos/images/buffalo_wild_wings_logo.png';
+import buffaloWildWingsLogo from '../../public/images/logos/buffalo_wild_wings_logo.png';
 import CouponModal from '../../src/components/CouponModal';
 
 /**
