@@ -24,9 +24,9 @@ const FoodSearchBar: React.FC<FoodSearchBarProps> = (props: FoodSearchBarProps) 
 
   /**
    * @function onSearch performs an action when the search button is pressed
-   * @returns {string}
+   * @returns {void}
    */
-  const onSearch = (value: string) => {
+  const onSearch = (value: string): void => {
     props.setResults(filterFoodItems(value, props.menuItems));
     props.setPageNumber(0);
   };

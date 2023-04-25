@@ -20,9 +20,6 @@ const Navbar: React.FC = () => {
       <Link href='/tips&tricks' style={styles.item}>
         tips & tricks
       </Link>
-      <Link href='/contact' style={styles.item}>
-        contact
-      </Link>
     </div>
   );
 };
@@ -37,7 +34,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-start',
     columnGap: '3.25rem',
-    paddingLeft: '4rem'
+    paddingLeft: '4rem',
+    flexWrap: 'wrap'
   },
 
   logo: {

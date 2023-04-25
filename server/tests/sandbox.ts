@@ -2,9 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import env from 'dotenv';
 import { MongoClient } from 'mongodb';
-import Restaurant from '../../types/interfaces/Restaurant';
 
-import RestaurantData from '../service/restaurantData';
 import UberEatsScraper from '../service/restaurant_scrapers/uberEatsScraper';
 import SkipTheDishesScraper from '../service/restaurant_scrapers/skipTheDishesScraper';
 import DoorDashScraper from '../service/restaurant_scrapers/doorDashScraper';
@@ -12,6 +10,10 @@ import WendysScraper from '../service/coupon_scrapers/wendysScraper';
 import McDonaldsScraper from '../service/coupon_scrapers/mcdonaldsScraper';
 import KfcScraper from '../service/coupon_scrapers/kfcScraper';
 import PopeyesScraper from '../service/coupon_scrapers/popeyesScraper';
+import DominosScraper from '../service/coupon_scrapers/dominosScraper';
+import PizzaHutScraper from '../service/coupon_scrapers/pizzaHut.scraper';
+import TacoBellScraper from '../service/coupon_scrapers/tacoBellScraper';
+import BuffaloWildWingsScraper from '../service/coupon_scrapers/buffaloWildWingsScraper';
 
 // Import routes
 import test from './test.route';
@@ -40,7 +42,11 @@ const testMain = async () => {
     const mcdonalds = new McDonaldsScraper(client);
     const kfc = new KfcScraper(client);
     const popeyes = new PopeyesScraper(client);
-    await Promise.all([ues.scrape()]);
+    const dominos = new DominosScraper(client);
+    const pizzahut = new PizzaHutScraper(client);
+    const tb = new TacoBellScraper(client);
+    const bww = new BuffaloWildWingsScraper(client);
+    await Promise.all([bww.scrape()]);
   } catch (e: unknown) {
     console.error(e);
   } finally {
