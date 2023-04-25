@@ -1,22 +1,30 @@
 import React from 'react';
 import Head from 'next/head';
-import bottomBorder from '../public/images/bottom_border.png';
+import bottomBorder from '../public/images/homepage/bottom_border.png';
 import Image from 'next/image';
 import EstimatedSavings from '../src/components/EstimatedSavings';
+import pancakes from '../public/images/homepage/pancakes.jpg';
+import fruitBowl from '../public/images/homepage/fruit_bowl.jpg';
+import burgerAndFries from '../public/images/homepage/burger_and_fries.jpg';
+import citrus from '../public/images/homepage/citrus.jpg';
+import dogOnBread from '../public/images/homepage/dog_on_bread.jpg';
+import mixedBowl from '../public/images/homepage/mixed_bowl.jpg';
+import salad from '../public/images/homepage/salad.jpg';
+import soup from '../public/images/homepage/soup.jpg';
+import veggies from '../public/images/homepage/veggies.jpg';
+import bananas from '../public/images/homepage/bananas.jpg';
+import cheese from '../public/images/homepage/cheese.jpg';
+import dessert from '../public/images/homepage/dessert.jpg';
+import grapes from '../public/images/homepage/grapes.jpg';
+import chocolate from '../public/images/homepage/chocolate.jpg';
+import smileToast from '../public/images/homepage/smile_toast.jpg';
+import onions from '../public/images/homepage/onions.jpg';
 
 /**
  * @component Home
  * @returns {JSX.Element}
  */
 export default function Home(): JSX.Element {
-  const Video = (props: any) => {
-    return (
-      <video style={styles.video} muted autoPlay loop>
-        <source src={props.src} />
-      </video>
-    );
-  };
-
   return (
     <>
       <Head>
@@ -32,22 +40,35 @@ export default function Home(): JSX.Element {
         <div style={styles.title}>Using this website helps people like you save on food!</div>
         <div style={styles.subtitle}>Total estimated savings:</div>
         <EstimatedSavings />
-        <div style={styles.videoContainer}>
-          <Video src='/videos/cutting_radish.mp4'></Video>
-          <Video src='/videos/egg_cooking.mp4'></Video>
-          <Video src='/videos/family_eating_together.mp4'></Video>
-          <Video src='/videos/family_eating.mp4'></Video>
-          <Video src='/videos/grilling_variety.mp4'></Video>
-          <Video src='/videos/making_pizza.mp4'></Video>
-          <Video src='/videos/meat_cooking.mp4'></Video>
-          <Video src='/videos/salad_rotating.mp4'></Video>
-          <Video src='/videos/scooping_ice_cream.mp4'></Video>
-          <Video src='/videos/sushi_display.mp4'></Video>
-          <Video src='/videos/vegetables.mp4'></Video>
-          <Video src='/videos/meat_in_container.mp4'></Video>
-          <Video src='/videos/eating_sandwich.mp4'></Video>
-          <Video src='/videos/washing_knife.mp4'></Video>
-          <Video src='/videos/blueberries.mp4'></Video>
+        <div
+          style={{
+            position: 'absolute' as const,
+            width: '60vw',
+            height: '105vh',
+            right: -200,
+            top: -60,
+            overflow: 'hidden',
+            display: 'flex',
+            flexWrap: 'wrap',
+            rowGap: 15,
+            columnGap: 15
+          }}>
+          <Image style={styles.image} src={pancakes} alt='pancakes' height={225} />
+          <Image style={styles.image} src={burgerAndFries} alt='burger and fries' height={225} />
+          <Image style={styles.image} src={fruitBowl} alt='fruit bowl' height={225} />
+          <Image style={styles.image} src={mixedBowl} alt='mixed bowl' height={225} />
+          <Image style={styles.image} src={dogOnBread} alt='dog on bread' height={225} />
+          <Image style={styles.image} src={soup} alt='soup' height={225} />
+          <Image style={styles.image} src={citrus} alt='citrus' height={225} />
+          <Image style={styles.image} src={veggies} alt='veggies' height={225} />
+          <Image style={styles.image} src={salad} alt='salad' height={225} />
+          <Image style={styles.image} src={cheese} alt='cheese' height={225} />
+          <Image style={styles.image} src={grapes} alt='grapes' height={225} />
+          <Image style={styles.image} src={dessert} alt='dessert' height={225} />
+          <Image style={styles.image} src={bananas} alt='bananas' height={225} />
+          <Image style={styles.image} src={onions} alt='onions' height={225} />
+          <Image style={styles.image} src={chocolate} alt='chocolate' height={225} />
+          <Image style={styles.image} src={smileToast} alt='smile toast' height={225} />
         </div>
         <Image style={styles.border} src={bottomBorder.src} alt='bottom border' width='1000' height='200' />
       </main>
@@ -79,18 +100,7 @@ const styles = {
     height: 200
   },
 
-  videoContainer: {
-    position: 'absolute' as const,
-    width: '60vw',
-    height: '105vh',
-    right: -200,
-    top: -60,
-    overflow: 'hidden'
-  },
-
-  video: {
-    borderRadius: 20,
-    width: 335,
-    padding: 10
+  image: {
+    borderRadius: 20
   }
 };
