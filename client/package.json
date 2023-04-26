@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@types/bson": "^4.2.0",
-    "@types/react-dom": "18.2.0",
+    "@types/react-dom": "18.2.1",
     "@vercel/analytics": "^1.0.0",
     "antd": "^5.4.2",
     "babel-loader": "^9.1.2",
