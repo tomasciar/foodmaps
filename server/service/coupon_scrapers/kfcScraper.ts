@@ -40,7 +40,10 @@ export default class KfcScraper extends CouponScraper {
       }
     }
 
-    if (coupons.length > 0) await this.postCoupons(coupons);
+    if (coupons.length > 0) {
+      await this.deleteCoupons(this.source);
+      await this.postCoupons(coupons);
+    }
 
     return coupons;
   }

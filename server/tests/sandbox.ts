@@ -35,9 +35,15 @@ const client: MongoClient = new MongoClient(uri);
 const testMain = async () => {
   try {
     await client.connect();
+
     const ues = new UberEatsScraper(client);
     const skip = new SkipTheDishesScraper(client);
     const dd = new DoorDashScraper(client);
+
+    await ues.scrape();
+    await skip.scrape();
+    await dd.scrape();
+
     const wendys = new WendysScraper(client);
     const mcdonalds = new McDonaldsScraper(client);
     const kfc = new KfcScraper(client);
@@ -46,7 +52,19 @@ const testMain = async () => {
     const pizzahut = new PizzaHutScraper(client);
     const tb = new TacoBellScraper(client);
     const bww = new BuffaloWildWingsScraper(client);
-    await Promise.all([bww.scrape()]);
+
+    await Promise.all([
+      wendys.scrape(),
+      mcdonalds.scrape(),
+      kfc.scrape(),
+      popeyes.scrape(),
+      dominos.scrape(),
+      pizzahut.scrape(),
+      tb.scrape(),
+      bww.scrape()
+    ]);
+
+    console.log('Coupons scraped');
   } catch (e: unknown) {
     console.error(e);
   } finally {
@@ -54,6 +72,24 @@ const testMain = async () => {
   }
 };
 
+const schedule = require('node-schedule');
+
 testMain();
+
+schedule.scheduleJob('* 0 * * *', async function () {
+  await testMain();
+});
+
+schedule.scheduleJob('* 6 * * *', async function () {
+  await testMain();
+});
+
+schedule.scheduleJob('* 12 * * *', async function () {
+  await testMain();
+});
+
+schedule.scheduleJob('* 18 * * *', async function () {
+  await testMain();
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

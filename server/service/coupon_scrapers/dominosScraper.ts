@@ -32,14 +32,17 @@ export default class DominosScraper extends CouponScraper {
         source: this.source,
         date: new Date(),
         title: data.Coupons[index].Code,
-        description: data.Coupons[index].Name + ' - $' + data.Coupons[index].Price.toFixed(2),
+        description: data.Coupons[index].Name + ' - $' + data.Coupons[index].Price,
         url: url
       });
 
       coupons.push(coupon);
     }
 
-    if (coupons.length > 0) await this.postCoupons(coupons);
+    if (coupons.length > 0) {
+      await this.deleteCoupons(this.source);
+      await this.postCoupons(coupons);
+    }
 
     return coupons;
   }

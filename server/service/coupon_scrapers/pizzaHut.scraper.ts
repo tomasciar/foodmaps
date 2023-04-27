@@ -48,7 +48,7 @@ export default class PizzaHutScraper extends CouponScraper {
             date: new Date(),
             title: $(item).find('a').children().eq(1).children().eq(0).text(),
             description: $(item).find('a').children().eq(1).children().eq(1).text(),
-            url: $(item).find('a').prop('href')
+            url: 'https://www.pizzahut.ca' + $(item).find('a').prop('href')
           });
 
           if (coupon.title) coupons.push(coupon);
@@ -59,7 +59,10 @@ export default class PizzaHutScraper extends CouponScraper {
     const startUrls: Array<string> = await this.getStartUrls();
     await crawler.run(startUrls);
 
-    if (coupons.length > 0) await this.postCoupons(coupons);
+    if (coupons.length > 0) {
+      await this.deleteCoupons(this.source);
+      await this.postCoupons(coupons);
+    }
 
     return coupons;
   }
