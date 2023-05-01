@@ -78,7 +78,10 @@ export default class PopeyesScraper extends CouponScraper {
       coupons.push(coupon);
     }
 
-    if (coupons.length > 0) await this.postCoupons(coupons);
+    if (coupons.length > 0) {
+      await this.deleteCoupons(this.source);
+      await this.postCoupons(coupons);
+    }
 
     return coupons;
   }

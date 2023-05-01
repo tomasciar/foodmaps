@@ -37,6 +37,14 @@ export default abstract class CouponScraper {
   }
 
   /**
+   * @function deleteCoupons deletes the scraped coupons from the database
+   * @returns {void}
+   */
+  async deleteCoupons(source: string): Promise<void> {
+    await this.client.db('scrape').collection('coupons').deleteMany({ source: source });
+  }
+
+  /**
    * @function delay
    * @param time (in milliseconds)
    */

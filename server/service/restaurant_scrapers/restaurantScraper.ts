@@ -47,6 +47,22 @@ export default abstract class RestaurantScraper {
   }
 
   /**
+   * @function deleteRestaurants deletes the scraped restaurants from the database
+   * @returns {void}
+   */
+  async deleteRestaurants(source: string): Promise<void> {
+    await this.client.db('scrape').collection('restaurants').deleteMany({ source: source });
+  }
+
+  /**
+   * @function deleteMenuItems deletes the scraped menu items from the database
+   * @returns {void}
+   */
+  async deleteMenuItems(source: string): Promise<void> {
+    await this.client.db('scrape').collection('menu_items').deleteMany({ source: source });
+  }
+
+  /**
    * @function delay
    * @param time (in milliseconds)
    */

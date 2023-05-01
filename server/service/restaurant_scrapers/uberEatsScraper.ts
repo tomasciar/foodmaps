@@ -145,8 +145,15 @@ export default class UberEatsScraper extends RestaurantScraper {
     const startUrls: Array<string> = await this.getStartUrls();
     await crawler.run(startUrls);
 
-    if (restaurants.length > 0) await this.postRestaurants(restaurants);
-    if (menuItems.length > 0) await this.postMenuItems(menuItems);
+    if (restaurants.length > 0) {
+      await this.postRestaurants(restaurants);
+      await this.deleteRestaurants(this.source);
+    }
+
+    if (menuItems.length > 0) {
+      await this.postMenuItems(menuItems);
+      await this.deleteMenuItems(this.source);
+    }
 
     return { restaurants, menuItems };
   }

@@ -10,6 +10,7 @@ import React from 'react';
 import FilterDropdown from '../../src/components/FilterDropdown';
 import BogoCheckbox from '../../src/components/BogoCheckbox';
 import ShuffleMenu from '../../src/components/ShuffleMenu';
+import { Alert } from 'antd';
 
 /**
  * @route Menu
@@ -37,6 +38,11 @@ export default function Menu(): JSX.Element {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
+        {menuItems.length || (
+          <div style={{ padding: '0 4rem 1rem 4rem' }}>
+            <Alert message='The geolocation search only works for Waterloo addresses' banner closable />
+          </div>
+        )}
         <AddressInput
           setRestaurants={setRestaurants}
           numberOfRestaurants={500}

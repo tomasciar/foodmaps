@@ -161,8 +161,15 @@ export default class SkipTheDishesScraper extends RestaurantScraper {
     await pushRestaurantsAndMenuItems(responseData.data.restaurantsList.closedRestaurants);
     await pushRestaurantsAndMenuItems(responseData.data.restaurantsList.openRestaurants);
 
-    if (restaurants.length > 0) await this.postRestaurants(restaurants);
-    if (menuItems.length > 0) await this.postMenuItems(menuItems);
+    if (restaurants.length > 0) {
+      await this.postRestaurants(restaurants);
+      await this.deleteRestaurants(this.source);
+    }
+
+    if (menuItems.length > 0) {
+      await this.postMenuItems(menuItems);
+      await this.deleteMenuItems(this.source);
+    }
 
     console.log('Data uploaded...');
 
