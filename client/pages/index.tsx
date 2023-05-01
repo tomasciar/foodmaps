@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Head from 'next/head';
 import bottomBorder from '../public/images/homepage/bottom_border.png';
 import Image from 'next/image';
@@ -26,7 +27,7 @@ import homeStyles from '../styles/Home.module.css';
  * @returns {JSX.Element}
  */
 export default function Home(): JSX.Element {
-  const IMAGE_HEIGHT: number = 225;
+  const IMAGE_HEIGHT = 225;
 
   return (
     <>
@@ -51,7 +52,7 @@ export default function Home(): JSX.Element {
           style={{
             position: 'absolute' as const,
             width: '60vw',
-            height: '115vh',
+            height: '100vh',
             right: -200,
             top: -60,
             overflow: 'hidden',
