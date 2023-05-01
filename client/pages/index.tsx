@@ -52,9 +52,9 @@ export default function Home(): JSX.Element {
           style={{
             position: 'absolute' as const,
             width: '60vw',
-            height: '100vh',
+            height: '105vh',
             right: -200,
-            top: -60,
+            top: '-5vh',
             overflow: 'hidden',
             display: 'flex',
             flexWrap: 'wrap',
