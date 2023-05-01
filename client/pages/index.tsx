@@ -26,6 +26,8 @@ import homeStyles from '../styles/Home.module.css';
  * @returns {JSX.Element}
  */
 export default function Home(): JSX.Element {
+  const IMAGE_HEIGHT: number = 225;
+
   return (
     <>
       <Head>
@@ -58,22 +60,22 @@ export default function Home(): JSX.Element {
             rowGap: 15,
             columnGap: 15
           }}>
-          <Image style={styles.image} src={pancakes} alt='pancakes' height={225} />
-          <Image style={styles.image} src={burgerAndFries} alt='burger and fries' height={225} />
-          <Image style={styles.image} src={fruitBowl} alt='fruit bowl' height={225} />
-          <Image style={styles.image} src={mixedBowl} alt='mixed bowl' height={225} />
-          <Image style={styles.image} src={dogOnBread} alt='dog on bread' height={225} />
-          <Image style={styles.image} src={soup} alt='soup' height={225} />
-          <Image style={styles.image} src={citrus} alt='citrus' height={225} />
-          <Image style={styles.image} src={veggies} alt='veggies' height={225} />
-          <Image style={styles.image} src={salad} alt='salad' height={225} />
-          <Image style={styles.image} src={cheese} alt='cheese' height={225} />
-          <Image style={styles.image} src={grapes} alt='grapes' height={225} />
-          <Image style={styles.image} src={dessert} alt='dessert' height={225} />
-          <Image style={styles.image} src={bananas} alt='bananas' height={225} />
-          <Image style={styles.image} src={onions} alt='onions' height={225} />
-          <Image style={styles.image} src={chocolate} alt='chocolate' height={225} />
-          <Image style={styles.image} src={smileToast} alt='smile toast' height={225} />
+          <Image style={styles.image} src={pancakes} alt='pancakes' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={burgerAndFries} alt='burger and fries' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={fruitBowl} alt='fruit bowl' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={mixedBowl} alt='mixed bowl' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={dogOnBread} alt='dog on bread' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={soup} alt='soup' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={citrus} alt='citrus' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={veggies} alt='veggies' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={salad} alt='salad' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={cheese} alt='cheese' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={grapes} alt='grapes' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={dessert} alt='dessert' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={bananas} alt='bananas' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={onions} alt='onions' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={chocolate} alt='chocolate' height={IMAGE_HEIGHT} />
+          <Image style={styles.image} src={smileToast} alt='smile toast' height={IMAGE_HEIGHT} />
         </div>
         <Image
           style={styles.border}
