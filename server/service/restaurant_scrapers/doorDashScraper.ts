@@ -118,8 +118,8 @@ export default class DoorDashScraper extends RestaurantScraper {
               price: new Price($(item).find('span[data-anchor-id="StoreMenuItemPrice"]').text()),
               category: restaurantData.servesCuisine.join(' '),
               geolocation: {
-                latitude: +`${menuData?.geo.latitude}`,
-                longitude: +`${menuData?.geo.longitude}`
+                latitude: restaurant.geolocation.latitude,
+                longitude: restaurant.geolocation.longitude
               },
               url: request.url
             });
@@ -134,13 +134,13 @@ export default class DoorDashScraper extends RestaurantScraper {
     await crawler.run(startUrls);
 
     if (restaurants.length > 0) {
-      await this.postRestaurants(restaurants);
       await this.deleteRestaurants(this.source);
+      await this.postRestaurants(restaurants);
     }
 
     if (menuItems.length > 0) {
-      await this.postMenuItems(menuItems);
       await this.deleteMenuItems(this.source);
+      await this.postMenuItems(menuItems);
     }
 
     return { restaurants, menuItems };

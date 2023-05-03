@@ -47,14 +47,6 @@ const main = async () => {
   try {
     await client.connect();
 
-    const ues = new UberEatsScraper(client);
-    const skip = new SkipTheDishesScraper(client);
-    const dd = new DoorDashScraper(client);
-
-    await ues.scrape();
-    await skip.scrape();
-    await dd.scrape();
-
     const wendys = new WendysScraper(client);
     const mcdonalds = new McDonaldsScraper(client);
     const kfc = new KfcScraper(client);
@@ -64,18 +56,22 @@ const main = async () => {
     const tb = new TacoBellScraper(client);
     const bww = new BuffaloWildWingsScraper(client);
 
-    await Promise.all([
-      wendys.scrape(),
-      mcdonalds.scrape(),
-      kfc.scrape(),
-      popeyes.scrape(),
-      dominos.scrape(),
-      pizzahut.scrape(),
-      tb.scrape(),
-      bww.scrape()
-    ]);
+    await wendys.scrape();
+    await mcdonalds.scrape();
+    await kfc.scrape();
+    await popeyes.scrape();
+    await dominos.scrape();
+    await pizzahut.scrape();
+    await tb.scrape();
+    await bww.scrape();
 
-    console.log('Coupons scraped');
+    const skip = new SkipTheDishesScraper(client);
+    const dd = new DoorDashScraper(client);
+    const ues = new UberEatsScraper(client);
+
+    await skip.scrape();
+    await dd.scrape();
+    await ues.scrape();
   } catch (e: unknown) {
     console.error(e);
   } finally {
@@ -85,8 +81,11 @@ const main = async () => {
 
 const schedule = require('node-schedule');
 
-main();
-schedule.scheduleJob('* 0 * * *', async () => await main());
-schedule.scheduleJob('* 6 * * *', async () => await main());
-schedule.scheduleJob('* 12 * * *', async () => await main());
-schedule.scheduleJob('* 18 * * *', async () => await main());
+(async () => {
+  await main();
+})();
+
+schedule.scheduleJob('0 0 * * *', async () => await main());
+schedule.scheduleJob('0 6 * * *', async () => await main());
+schedule.scheduleJob('0 12 * * *', async () => await main());
+schedule.scheduleJob('0 18 * * *', async () => await main());
