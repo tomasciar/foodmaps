@@ -35,11 +35,13 @@ export default function Coupons(): JSX.Element {
             alignItems: 'center',
             flexDirection: 'column'
           }}>
-          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <CouponModal source="Wendy's" image={wendysLogo} imageHeight={60} imageWidth={180} />
             <CouponModal source="McDonald's" image={mcdonaldsLogo} imageHeight={80} imageWidth={90} />
             <CouponModal source='KFC' image={kfcLogo} imageHeight={50} imageWidth={166} />
             <CouponModal source='Popeyes' image={popeyesLogo} imageHeight={100} imageWidth={91} />
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <CouponModal source="Domino's" image={dominosLogo} imageHeight={100} imageWidth={100} />
             <CouponModal source='Pizza Hut' image={pizzaHutLogo} imageHeight={82} imageWidth={100} />
             <CouponModal source='Taco Bell' image={tacoBellLogo} imageHeight={100} imageWidth={68} />
