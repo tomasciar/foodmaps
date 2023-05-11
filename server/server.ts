@@ -53,6 +53,8 @@ async function delay(time: number) {
   });
 }
 
+const DELAY = 10000;
+
 const main = async () => {
   try {
     await client.connect();
@@ -67,32 +69,32 @@ const main = async () => {
     const bww = new BuffaloWildWingsScraper(client);
 
     await wendys.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await mcdonalds.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await kfc.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await popeyes.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await dominos.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await pizzahut.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await tb.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await bww.scrape();
-    await delay(5000);
+    await delay(DELAY);
 
     const skip = new SkipTheDishesScraper(client);
     const dd = new DoorDashScraper(client);
     const ues = new UberEatsScraper(client);
 
     await skip.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await dd.scrape();
-    await delay(5000);
+    await delay(DELAY);
     await ues.scrape();
-    await delay(5000);
+    await delay(DELAY);
   } catch (e: unknown) {
     console.error(e);
   } finally {
