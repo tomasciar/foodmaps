@@ -1,8 +1,8 @@
 import CouponScraper from './couponScraper';
 import { MongoClient } from 'mongodb';
 import Coupon from '../../../types/interfaces/Coupon';
-import axios from 'axios';
 import CouponData from '../couponData';
+const axiosInstance = require('../../config/axiosInstance');
 
 export default class KfcScraper extends CouponScraper {
   readonly source: string;
@@ -23,7 +23,7 @@ export default class KfcScraper extends CouponScraper {
 
     const startUrls: Array<string> = await this.getStartUrls();
 
-    const response = await axios.get('https://www.kfc.ca/menu/GetItems?categoryID=CAT1');
+    const response = await axiosInstance.get('https://www.kfc.ca/menu/GetItems?categoryID=CAT1');
     const data = await response.data;
 
     for (const index in data.DataObject.MenuData.SelectedCategory.SubCategories) {

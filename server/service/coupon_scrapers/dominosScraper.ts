@@ -1,8 +1,8 @@
 import CouponScraper from './couponScraper';
 import { MongoClient } from 'mongodb';
 import Coupon from '../../../types/interfaces/Coupon';
-import axios from 'axios';
 import CouponData from '../couponData';
+const axiosInstance = require('../../config/axiosInstance');
 
 export default class DominosScraper extends CouponScraper {
   readonly source: string;
@@ -24,7 +24,7 @@ export default class DominosScraper extends CouponScraper {
     const urls: Array<string> = await this.getStartUrls();
     const url: string = urls[0];
 
-    const response = await axios.get('https://order.dominos.ca/power/store/10881/menu?lang=en&structured=true');
+    const response = await axiosInstance.get('https://order.dominos.ca/power/store/10881/menu?lang=en&structured=true');
     const { data } = response;
 
     for (const index in data.Coupons) {

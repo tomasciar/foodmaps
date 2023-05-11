@@ -7,7 +7,7 @@ import Price from '../../../types/classes/Price';
 import { NaPhoneNumber } from '../../../types/classes/PhoneNumber';
 import RestaurantData from '../restaurantData';
 import MenuItemData from '../menuItemData';
-import axios from 'axios';
+const axiosInstance = require('../../config/axiosInstance');
 
 /**
  * @class SkipTheDishesScraper
@@ -93,7 +93,7 @@ export default class SkipTheDishesScraper extends RestaurantScraper {
       data: data
     };
 
-    const response = await axios.request(config);
+    const response = await axiosInstance.request(config);
     const responseData = await response.data;
 
     const pushRestaurantsAndMenuItems = async (list: Array<any>) => {
@@ -109,7 +109,7 @@ export default class SkipTheDishesScraper extends RestaurantScraper {
           }
         };
 
-        const response2 = await axios.request(config2);
+        const response2 = await axiosInstance.request(config2);
         const responseData2 = await response2.data;
 
         const restaurant: Restaurant = new RestaurantData({
