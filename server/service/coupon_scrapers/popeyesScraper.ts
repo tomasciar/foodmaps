@@ -1,8 +1,8 @@
 import CouponScraper from './couponScraper';
 import { MongoClient } from 'mongodb';
 import Coupon from '../../../types/interfaces/Coupon';
-import axios from 'axios';
 import CouponData from '../couponData';
+const axiosInstance = require('../../config/axiosInstance');
 
 export default class PopeyesScraper extends CouponScraper {
   readonly source: string;
@@ -58,7 +58,7 @@ export default class PopeyesScraper extends CouponScraper {
       data: data
     };
 
-    const response = await axios.request(config);
+    const response = await axiosInstance.request(config);
     const responseData = await response.data;
 
     const urls: Array<string> = await this.getStartUrls();
