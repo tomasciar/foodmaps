@@ -94,4 +94,4 @@ schedule.scheduleJob('0 6 * * *', async () => await main());
 schedule.scheduleJob('0 12 * * *', async () => await main());
 schedule.scheduleJob('0 18 * * *', async () => await main());
 
-module.exports = app;
+export default app;

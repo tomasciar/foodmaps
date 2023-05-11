@@ -8,7 +8,8 @@
     "sandbox": "nodemon ./tests/sandbox.ts",
     "lint": "eslint --ext .ts --ignore-path ../.gitignore .",
     "lint-fix": "eslint --ext .ts --ignore-path .eslintignore . --fix",
-    "update": "npm i -g npm-check-updates && ncu -u && npm install"
+    "update": "npm i -g npm-check-updates && ncu -u && npm install",
+    "vercel-build": "echo hello"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,7 @@
     "axios": "1.4.0",
     "cheerio": "1.0.0-rc.12",
     "cors": "2.8.5",
-    "crawlee": "3.3.1",
+    "crawlee": "3.3.2",
     "dotenv": "16.0.3",
     "express": "4.18.2",
     "mongodb": "5.4.0",
