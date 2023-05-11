@@ -25,7 +25,7 @@ import coupon from './routes/coupon.route';
 
 const app = express();
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.send('Foodmaps API');
 });
 
@@ -93,5 +93,3 @@ schedule.scheduleJob('0 0 * * *', async () => await main());
 schedule.scheduleJob('0 6 * * *', async () => await main());
 schedule.scheduleJob('0 12 * * *', async () => await main());
 schedule.scheduleJob('0 18 * * *', async () => await main());
-
-module.exports = app;
