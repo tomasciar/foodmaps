@@ -43,6 +43,16 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 const uri: string = process.env.MONGO_URI;
 const client: MongoClient = new MongoClient(uri);
 
+/**
+ * @function delay
+ * @param time (in milliseconds)
+ */
+async function delay(time: number) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, time);
+  });
+}
+
 const main = async () => {
   try {
     await client.connect();
@@ -57,21 +67,32 @@ const main = async () => {
     const bww = new BuffaloWildWingsScraper(client);
 
     await wendys.scrape();
+    await delay(5000);
     await mcdonalds.scrape();
+    await delay(5000);
     await kfc.scrape();
+    await delay(5000);
     await popeyes.scrape();
+    await delay(5000);
     await dominos.scrape();
+    await delay(5000);
     await pizzahut.scrape();
+    await delay(5000);
     await tb.scrape();
+    await delay(5000);
     await bww.scrape();
+    await delay(5000);
 
     const skip = new SkipTheDishesScraper(client);
     const dd = new DoorDashScraper(client);
     const ues = new UberEatsScraper(client);
 
     await skip.scrape();
+    await delay(5000);
     await dd.scrape();
+    await delay(5000);
     await ues.scrape();
+    await delay(5000);
   } catch (e: unknown) {
     console.error(e);
   } finally {

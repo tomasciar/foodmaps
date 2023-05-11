@@ -9,7 +9,7 @@ import React from 'react';
  */
 const CouponCard: React.FC<Coupon> = (props: Coupon) => {
   /**
-   * @function clickItem updates the database when a coupon is clicked
+   * @function clickCoupon updates the database when a coupon is clicked
    */
   async function clickCoupon(): Promise<void> {
     await fetch(`${getDomain()}/interactions/clickCoupon`);
