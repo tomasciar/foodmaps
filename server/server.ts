@@ -25,6 +25,10 @@ import coupon from './routes/coupon.route';
 
 const app = express();
 
+app.get('/', (req, res) => {
+  res.send('Foodmaps API');
+});
+
 env.config();
 const port = process.env.PORT || 2820;
 
@@ -89,3 +93,5 @@ schedule.scheduleJob('0 0 * * *', async () => await main());
 schedule.scheduleJob('0 6 * * *', async () => await main());
 schedule.scheduleJob('0 12 * * *', async () => await main());
 schedule.scheduleJob('0 18 * * *', async () => await main());
+
+module.exports = app;
