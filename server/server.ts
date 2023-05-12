@@ -29,7 +29,9 @@ app.get('/', (_, res) => {
   res.send('Foodmaps API');
 });
 
-env.config();
+const path = require('path');
+env.config({ path: path.join(__dirname, '.env') });
+
 const port = process.env.PORT || 2820;
 
 // Bypass CORS policy
