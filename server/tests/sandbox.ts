@@ -20,7 +20,9 @@ import test from './test.route';
 
 const app = express();
 
-env.config();
+const path = require('path');
+env.config({ path: path.join(__dirname, '.env') });
+
 const port = process.env.TEST_PORT || 2820;
 
 // Bypass CORS policy

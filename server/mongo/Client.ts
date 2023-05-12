@@ -5,7 +5,8 @@ export default class Client {
   public client: MongoClient;
 
   constructor() {
-    env.config();
+    const path = require('path');
+    env.config({ path: path.join(__dirname, '.env') });
     const uri: string = process.env.MONGO_URI;
     this.client = new MongoClient(uri);
   }
