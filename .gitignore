@@ -24,3 +24,4 @@
 **.vscode
 
 **/storage
+**/ecosystem.config.js
