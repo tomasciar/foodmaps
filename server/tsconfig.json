@@ -36,6 +36,6 @@
     "removeComments": true,
     "resolveJsonModule": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../types/**/*.ts", "service/coupon_scrapers/dominosScraper.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../types/**/*.ts"],
   "exclude": ["node_modules"]
 }

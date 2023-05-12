@@ -45,9 +45,9 @@ export default function Menu(): JSX.Element {
         )}
         <AddressInput
           setRestaurants={setRestaurants}
-          numberOfRestaurants={500}
+          numberOfRestaurants={2500}
           setMenuItems={setMenuItems}
-          numberOfMenuItems={25000}
+          numberOfMenuItems={200000}
         />
         <FoodSearchBar
           results={filteredMenuItems}
