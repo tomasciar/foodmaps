@@ -80,8 +80,6 @@ const main = async () => {
     await ues.scrape();
   } catch (e: unknown) {
     console.error(e);
-  } finally {
-    client.close();
   }
 };
 
