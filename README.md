@@ -6,9 +6,9 @@ https://github.com/tomasciar/foodmaps/assets/81879857/e705a875-9094-493a-bfa9-a4
 
 ## Frontend
 UI Components:
-- Map and List Displays: View restaurant locations and scroll through a curated list of options.
-- Search & Filter: Quickly find what you're looking for.
-- Item Details: Get the scoop on each menu item, from ingredients to any current deals.
+- Map and List Displays
+- Search & Filter
+- Item Details
 
 ## Backend
 The backend is responsible for processing and serving data to the frontend and comprises several distinct components.
